@@ -12,12 +12,16 @@ struct MainView: View {
         VStack(spacing: 0) {
             HeaderArea()
                 .padding(.horizontal, 30)
+                .padding(.bottom, 20)
             FightingArea()
                 .padding(.horizontal, 25)
                 .padding(.bottom, 38)
+            
             CardArea()
-            ButtonArea()
-        }
+            
+            ChulsseukButton()
+                .padding(.horizontal, 25)
+        } // VStack
         
     }
 }
