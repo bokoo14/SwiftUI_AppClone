@@ -13,9 +13,16 @@ struct ChulsseukButton: View {
             // action
         } label: {
             Text("출쓱하기")
-                .foregroundColor(.black)
-        }
-
+                .font(.pretendard(.medium, size: 20))
+                .foregroundColor(.ButtonFontColor)
+                .padding(.vertical, 38)
+                .frame(maxWidth: .infinity)
+                .background(Color.ButtonColor)
+                .cornerRadius(50)
+            //.background(.red) 이건 되는데
+            //.background(.ButtonColor) 이건 왜 안돼? 인식을 못하나?
+        } // Button
+        
     }
 }
 
