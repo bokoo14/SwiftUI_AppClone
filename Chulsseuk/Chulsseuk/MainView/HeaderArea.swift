@@ -11,11 +11,22 @@ struct HeaderArea: View {
     var body: some View {
         HStack (spacing: 16) {
             Spacer()
-            Image(systemName: "calendar")
-                .font(.system(size: 22.67))
-            Image(systemName: "gearshape")
-                .font(.system(size: 22.67))
-        }
+            Button {
+                // action
+            } label: {
+                Image(systemName: "calendar")
+                    .font(.system(size: 22.67))
+                    .foregroundColor(.IconColor)
+            } // Button1
+
+            Button {
+                // action
+            } label: {
+                Image(systemName: "gearshape")
+                    .font(.system(size: 22.67))
+                    .foregroundColor(.IconColor)
+            } // Button2
+        } // HStack
         .padding(.vertical, 12)
         .border(.red)
     }
