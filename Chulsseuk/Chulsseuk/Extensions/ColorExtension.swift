@@ -12,7 +12,8 @@ extension Color {
     static let BackgroundColor = Color("BackgroundColor")
     
     // MARK: Button Color
-    static let ButtonColot = Color("ButtonColor")
+    static let ButtonColor = Color("ButtonColor")
+    static let ButtonFontColor = Color("ButtonFontColor")
     
     // MARK: CardBackgroundColor
     static let CardBackgroundColor = Color("CardBackgroundColor")
