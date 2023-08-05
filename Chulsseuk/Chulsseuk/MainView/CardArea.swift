@@ -30,6 +30,7 @@ struct CardFront: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 151, height: 226)
+                        .padding(.top, 85)
                         //.frame(maxWidth: .infinity)
                     
                     Text("오늘은 아카데미 휴일!\n푹 쉬고 다음에 만나요.")
@@ -37,6 +38,7 @@ struct CardFront: View {
                         .lineSpacing(6)
                         .foregroundColor(.TextColor)
                         .font(.pretendard(.medium, size: 20))
+                        .padding(.top, 42)
                     
                     HStack (spacing: 1){
                         Text("출석 규정 보러가기")
@@ -46,6 +48,7 @@ struct CardFront: View {
                             .font(.pretendard(.medium, size: 13))
                             .foregroundColor(.NavigationColor)
                     }
+                    .padding(.top, 16)
                     
                 } // VStack
             } // overlay
