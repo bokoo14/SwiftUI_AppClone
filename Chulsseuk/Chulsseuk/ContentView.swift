@@ -10,6 +10,7 @@
  1. 깔끔한 코드
  2. 폴더링 잘하기
  3. spacer, padding적절히 잘 쓰기
+ 4. 반응형 -> 상수값 피해라!!!
  */
 
 import SwiftUI
