@@ -27,6 +27,7 @@
 		3E5B53582A7C8B8400CAAF3B /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5B534F2A7C8B8400CAAF3B /* Pretendard-Thin.otf */; };
 		3E5B53592A7C8B8400CAAF3B /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5B53502A7C8B8400CAAF3B /* Pretendard-Black.otf */; };
 		3E5B535A2A7C8B8400CAAF3B /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5B53512A7C8B8400CAAF3B /* Pretendard-ExtraBold.otf */; };
+		3E7E0F5E2A7F8A97003C1869 /* DeviceSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7E0F5D2A7F8A97003C1869 /* DeviceSize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		3E5B53502A7C8B8400CAAF3B /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
 		3E5B53512A7C8B8400CAAF3B /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
 		3E5B535D2A7C907E00CAAF3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3E7E0F5D2A7F8A97003C1869 /* DeviceSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +92,6 @@
 				3E5B53422A7C10D100CAAF3B /* MainView */,
 				3E5B533D2A7BFC9600CAAF3B /* Component */,
 				3E5B53462A7C8B3D00CAAF3B /* Assets */,
-				3E5B53432A7C88E500CAAF3B /* Extensions */,
-				3E5B53292A7BF15600CAAF3B /* Assets.xcassets */,
 				3E5B53342A7BFBF000CAAF3B /* Helper */,
 				3E5B532B2A7BF15600CAAF3B /* Preview Content */,
 			);
@@ -109,6 +109,7 @@
 		3E5B53342A7BFBF000CAAF3B /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				3E7E0F5D2A7F8A97003C1869 /* DeviceSize.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -132,17 +133,11 @@
 			path = MainView;
 			sourceTree = "<group>";
 		};
-		3E5B53432A7C88E500CAAF3B /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				3E5B53442A7C890300CAAF3B /* ColorExtension.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		3E5B53462A7C8B3D00CAAF3B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				3E5B53292A7BF15600CAAF3B /* Assets.xcassets */,
+				3E7E0F7B2A7FBA8A003C1869 /* Colors */,
 				3E5B535B2A7C8B8700CAAF3B /* Fonts */,
 			);
 			path = Assets;
@@ -171,6 +166,14 @@
 				3E5B534F2A7C8B8400CAAF3B /* Pretendard-Thin.otf */,
 			);
 			path = Pretendard;
+			sourceTree = "<group>";
+		};
+		3E7E0F7B2A7FBA8A003C1869 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				3E5B53442A7C890300CAAF3B /* ColorExtension.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +263,7 @@
 				3E5B533A2A7BFC8500CAAF3B /* CardArea.swift in Sources */,
 				3E5B53362A7BFC7000CAAF3B /* MainView.swift in Sources */,
 				3E5B53412A7BFF9500CAAF3B /* FightingArea.swift in Sources */,
+				3E7E0F5E2A7F8A97003C1869 /* DeviceSize.swift in Sources */,
 				3E5B53262A7BF15400CAAF3B /* ChulsseukApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
