@@ -4,7 +4,7 @@
 ## [Act1] 출쓱(애플 디벨로퍼 아카데미 출석 관리 앱)
 |실제 어플|클론 어플 구현 모습|
 |:----:|:----:|
-|<img src = https://github.com/MoHamSung/bulmang/assets/114594496/66d922c6-409f-4427-8dcd-29eb63e7605a />|<img src= https://github.com/bokoo14/SwiftUI_AppClone/assets/97583162/5710f948-6ca5-4d23-8bee-b955f8686804 width="294" height="640"/>|
+|<img src = https://github.com/MoHamSung/bulmang/assets/114594496/66d922c6-409f-4427-8dcd-29eb63e7605a />|<img src= https://github.com/bokoo14/SwiftUI_AppClone/assets/97583162/e87f4d14-06b6-4acf-958d-999cf12a2d75 width="294" height="640"/>|
 
 
 ## [Act2] Apple Store
