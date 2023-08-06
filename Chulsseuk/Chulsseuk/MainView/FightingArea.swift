@@ -12,19 +12,13 @@ struct FightingArea: View {
     
     var body: some View {
         HStack (spacing: 0) {
-            VStack (spacing: 8){
-                Text("월클 디벨로퍼 \(userName).")
-                    .font(.pretendard(.light, size: 18))
-                    
-                    .border(.red)
-                Text("오늘도 화이팅하세요!")
-                    .font(.pretendard(.light, size: 18))
-                    .border(.red)
-            } // VStack
-            .border(.red)
+            Text("월클 디벨로퍼 \(userName).\n오늘도 화이팅하세요!")
+                .font(.pretendard(.light, size: 18))
+                .lineSpacing(8)
+                //.border(.red)
             Spacer()
         } // HStack
-        .border(.red)
+        //.border(.red)
     }
 }
 
