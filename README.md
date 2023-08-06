@@ -2,24 +2,9 @@
 디자이너의 피그마를 보며 iOS앱 만들기
 
 ## [Act1] 출쓱(애플 디벨로퍼 아카데미 출석 관리 앱)
-<table>
-    <thead>
-        <tr>
-            <th>실제 어플</th>
-            <th>클론 어플 구현 모습</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <img src = https://github.com/MoHamSung/bulmang/assets/114594496/66d922c6-409f-4427-8dcd-29eb63e7605a />
-            </td>
-            <td>  
-              <img src= https://github.com/MoHamSung/bulmang/assets/114594496/71ba3100-1e6f-44cf-a19c-06aca1354b30 width="294" height="640"/>
-            </td>
-        </tr>
-    </tbody>
-</table>
+|실제 어플|클론 어플 구현 모습|
+|:----:|:----:|
+|<img src = https://github.com/MoHamSung/bulmang/assets/114594496/66d922c6-409f-4427-8dcd-29eb63e7605a />|<img src= https://github.com/bokoo14/SwiftUI_AppClone/assets/97583162/5710f948-6ca5-4d23-8bee-b955f8686804 width="294" height="640"/>|
 
 
 ## [Act2] Apple Store
@@ -36,7 +21,7 @@
               <img src= https://github.com/MoHamSung/bulmang/assets/114594496/ee2aecc5-e20c-4d1c-9e99-be4fcef4202f width="294" height="640"/>
             </td>
             <td>  
-              <img src= https://github.com/MoHamSung/bulmang/assets/114594496/8e447ace-0e0e-4102-bcef-11e1999c2939 width="294" height="640"/>
+              <img src= "https://github.com/MoHamSung/bulmang/assets/114594496/8e447ace-0e0e-4102-bcef-11e1999c2939" width="294" height="640"/>
             </td>
         </tr>
     </tbody>
