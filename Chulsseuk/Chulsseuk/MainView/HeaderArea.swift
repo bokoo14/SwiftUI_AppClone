@@ -15,7 +15,9 @@ struct HeaderArea: View {
                 // action
             } label: {
                 Image(systemName: "calendar")
-                    .font(.system(size: 22.67))
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 28)
                     .foregroundColor(.IconColor)
             } // Button1
 
@@ -23,12 +25,14 @@ struct HeaderArea: View {
                 // action
             } label: {
                 Image(systemName: "gearshape")
-                    .font(.system(size: 22.67))
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 28)
                     .foregroundColor(.IconColor)
             } // Button2
         } // HStack
         .padding(.vertical, 12)
-        .border(.red)
+        //.border(.red)
     }
 }
 
