@@ -92,8 +92,6 @@
 				3E5B53422A7C10D100CAAF3B /* MainView */,
 				3E5B533D2A7BFC9600CAAF3B /* Component */,
 				3E5B53462A7C8B3D00CAAF3B /* Assets */,
-				3E5B53432A7C88E500CAAF3B /* Extensions */,
-				3E5B53292A7BF15600CAAF3B /* Assets.xcassets */,
 				3E5B53342A7BFBF000CAAF3B /* Helper */,
 				3E5B532B2A7BF15600CAAF3B /* Preview Content */,
 			);
@@ -111,6 +109,7 @@
 		3E5B53342A7BFBF000CAAF3B /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				3E7E0F5D2A7F8A97003C1869 /* DeviceSize.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -134,18 +133,11 @@
 			path = MainView;
 			sourceTree = "<group>";
 		};
-		3E5B53432A7C88E500CAAF3B /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				3E5B53442A7C890300CAAF3B /* ColorExtension.swift */,
-				3E7E0F5D2A7F8A97003C1869 /* DeviceSize.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		3E5B53462A7C8B3D00CAAF3B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				3E5B53292A7BF15600CAAF3B /* Assets.xcassets */,
+				3E7E0F7B2A7FBA8A003C1869 /* Colors */,
 				3E5B535B2A7C8B8700CAAF3B /* Fonts */,
 			);
 			path = Assets;
@@ -174,6 +166,14 @@
 				3E5B534F2A7C8B8400CAAF3B /* Pretendard-Thin.otf */,
 			);
 			path = Pretendard;
+			sourceTree = "<group>";
+		};
+		3E7E0F7B2A7FBA8A003C1869 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				3E5B53442A7C890300CAAF3B /* ColorExtension.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

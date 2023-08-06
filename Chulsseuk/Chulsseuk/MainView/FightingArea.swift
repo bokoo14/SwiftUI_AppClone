@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FightingArea: View {
-    @State var userName: String = "Malty"
+    @State var userName: String = "Luna"
     
     var body: some View {
         HStack (spacing: 0) {

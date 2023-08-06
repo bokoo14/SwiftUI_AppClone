@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        
             ZStack {
                 Color.BackgroundColor.ignoresSafeArea()
                 
@@ -17,6 +16,7 @@ struct MainView: View {
                     HeaderArea()
                         .padding(.horizontal, 30)
                         .padding(.bottom, 20)
+                        .padding(.top, DeviceSize.width > DeviceSize.iPhoneSE ? 0 : 20)
                     FightingArea()
                         .padding(.horizontal, 25)
                         .padding(.bottom, 38)
@@ -26,7 +26,7 @@ struct MainView: View {
                     
                     ChulsseukButton()
                         .padding(.horizontal, 25)
-                        //.padding(.bottom, 50)
+                        .padding(.bottom, DeviceSize.width > DeviceSize.iPhoneSE ? 0 : 20)
                 } // VStack
             } // ZStack
             .ignoresSafeArea()

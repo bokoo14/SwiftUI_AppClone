@@ -19,7 +19,7 @@ struct DeviceSize {
     static let iPhone14: CGFloat = 390 // 390x844pt(1170x2532픽셀 @3x)
     static let iPhone14Pro: CGFloat = 393 // 393x852pt(1179x2556픽셀 @3x)
     static let iPhone14ProMax: CGFloat = 430 // 430x932pt(1290x2796픽셀 @3x)
-    static let width: CGFloat = UIScreen.main.bounds.width
+    static let width: CGFloat = UIScreen.main.bounds.width // 현재 디바이스의 width값
 }
 
-// iPhoneSE의 크기만 신경써주면 된다! 
+// iPhoneSE의 크기만 신경써주면 된다!

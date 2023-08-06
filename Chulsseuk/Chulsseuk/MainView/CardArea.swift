@@ -77,7 +77,7 @@ struct CardFront: View {
         .frame(maxWidth: .infinity)
         .background(Color.CardBackgroundColor)
         .cornerRadius(24)
-        .shadow(color: .black.opacity(0.95), radius: 8.5, x: 0, y: 4)
+        .shadow(color: .black.opacity(0.05), radius: 8.5, x: 0, y: 4)
         .padding(.horizontal, 30)
         .rotation3DEffect(Angle(degrees: frontDegree),axis: (x: 0, y: 1, z: 0), perspective: 0.2)
     }
@@ -107,7 +107,7 @@ struct CardBack: View {
         .background(Color.CardBackgroundColor)
         .cornerRadius(24)
         .padding(.horizontal, 30)
-        .shadow(color: .black.opacity(0.95), radius: 8.5, x: 0, y: 4)
+        .shadow(color: .black.opacity(0.05), radius: 8.5, x: 0, y: 4)
         .rotation3DEffect(Angle(degrees: backDegree),axis: (x: 0, y: 1, z: 0), perspective: 0.2)
     }
 }
