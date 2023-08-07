@@ -29,6 +29,7 @@
 		3E68474D2A80911C0082E9D8 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E68474C2A80911C0082E9D8 /* Icon.swift */; };
 		3E6847532A80925B0082E9D8 /* HeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6847522A80925B0082E9D8 /* HeaderModel.swift */; };
 		3E6847552A80949A0082E9D8 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6847542A80949A0082E9D8 /* ContentModel.swift */; };
+		3E6847572A8097650082E9D8 /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6847562A8097650082E9D8 /* TabModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		3E68474C2A80911C0082E9D8 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		3E6847522A80925B0082E9D8 /* HeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderModel.swift; sourceTree = "<group>"; };
 		3E6847542A80949A0082E9D8 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
+		3E6847562A8097650082E9D8 /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				3E6847522A80925B0082E9D8 /* HeaderModel.swift */,
+				3E6847562A8097650082E9D8 /* TabModel.swift */,
 				3E6847542A80949A0082E9D8 /* ContentModel.swift */,
 			);
 			path = Model;
@@ -299,6 +302,7 @@
 				3E68471B2A807AB10082E9D8 /* ContentView.swift in Sources */,
 				3E6847552A80949A0082E9D8 /* ContentModel.swift in Sources */,
 				3E68472C2A807E330082E9D8 /* HeaderArea.swift in Sources */,
+				3E6847572A8097650082E9D8 /* TabModel.swift in Sources */,
 				3E6847292A807E220082E9D8 /* MainView.swift in Sources */,
 				3E6847192A807AB10082E9D8 /* NaverWebtoonApp.swift in Sources */,
 			);

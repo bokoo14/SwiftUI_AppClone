@@ -5,7 +5,7 @@
 //  Created by Bokyung on 2023/08/07.
 //
 
-import SwiftUI
+import Foundation
 
 struct HeaderBanner: Identifiable {
     let id: UUID = UUID()

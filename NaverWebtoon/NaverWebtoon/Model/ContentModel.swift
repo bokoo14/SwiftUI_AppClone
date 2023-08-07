@@ -105,7 +105,7 @@ var fridayWebToons: [Webtoon] = [
 ]
 
 
-var SaturdayWebToons: [Webtoon] = [
+var saturdayWebToons: [Webtoon] = [
     Webtoon(imageTitle: "ImgContentSat01", webtoonTitle: "잪집에는 로꼬 살고 있다", autorName: "로꼬 ★9.78"),
     Webtoon(imageTitle: "ImgContentSat02", webtoonTitle: "알고 일기", autorName: "로꼬 ★9.78"),
     Webtoon(imageTitle: "ImgContentSat03", webtoonTitle: "페페를 죽여줘요", autorName: "로꼬 ★9.78"),
@@ -124,7 +124,7 @@ var SaturdayWebToons: [Webtoon] = [
 ]
 
 
-var SundayWebToons: [Webtoon] = [
+var sundayWebToons: [Webtoon] = [
     Webtoon(imageTitle: "ImgContentSun01", webtoonTitle: "김다빈형님", autorName: "김다빈 ★9.88"),
     Webtoon(imageTitle: "ImgContentSun02", webtoonTitle: "숙제 안해오면 몽둥이", autorName: "김다빈 ★9.88"),
     Webtoon(imageTitle: "ImgContentSun03", webtoonTitle: "김다빈, 전설이 되다", autorName: "김다빈 ★9.88"),
@@ -143,7 +143,7 @@ var SundayWebToons: [Webtoon] = [
 ]
 
 
-var NewWebToons: [Webtoon] = [
+var newWebToons: [Webtoon] = [
     Webtoon(imageTitle: "ImgContentNew01", webtoonTitle: "신혼일기", autorName: "하명관 ★9.78"),
     Webtoon(imageTitle: "ImgContentNew02", webtoonTitle: "싸움못함", autorName: "하명관 ★9.78"),
     Webtoon(imageTitle: "ImgContentNew03", webtoonTitle: "퇴학용병", autorName: "하명관 ★9.78"),
