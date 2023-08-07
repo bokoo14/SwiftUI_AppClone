@@ -17,24 +17,21 @@ struct HeaderArea: View {
                 Image(systemName: "calendar")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-//                    .frame(width: 28)
-                   .frame(width: DeviceSize.width > DeviceSize.iPhoneSE ? 28 : 20)
+                    .frame(width: DeviceSize.width > DeviceSize.iPhoneSE ? 28 : 20)
                     .foregroundColor(.IconColor)
             } // Button1
-
+            
             Button {
                 // action
             } label: {
                 Image(systemName: "gearshape")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-//                    .frame(width: 28)
-                  .frame(width: DeviceSize.width > DeviceSize.iPhoneSE ? 28 : 20)
+                    .frame(width: DeviceSize.width > DeviceSize.iPhoneSE ? 28 : 20)
                     .foregroundColor(.IconColor)
             } // Button2
         } // HStack
         .padding(.vertical, 12)
-        //.border(.red)
     }
 }
 

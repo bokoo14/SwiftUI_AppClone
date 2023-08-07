@@ -12,6 +12,7 @@
 		3E7E0F702A7FAB4D003C1869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E7E0F6F2A7FAB4D003C1869 /* Assets.xcassets */; };
 		3E7E0F732A7FAB4D003C1869 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E7E0F722A7FAB4D003C1869 /* Preview Assets.xcassets */; };
 		3E7E0F7A2A7FAB6C003C1869 /* InputNumberArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7E0F792A7FAB6C003C1869 /* InputNumberArea.swift */; };
+		3E7E0F7D2A7FD700003C1869 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7E0F7C2A7FD700003C1869 /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		3E7E0F6F2A7FAB4D003C1869 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E7E0F722A7FAB4D003C1869 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3E7E0F792A7FAB6C003C1869 /* InputNumberArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputNumberArea.swift; sourceTree = "<group>"; };
+		3E7E0F7C2A7FD700003C1869 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				3E7E0F792A7FAB6C003C1869 /* InputNumberArea.swift */,
 				3E7E0F6F2A7FAB4D003C1869 /* Assets.xcassets */,
 				3E7E0F712A7FAB4D003C1869 /* Preview Content */,
+				3E7E0F7C2A7FD700003C1869 /* Test.swift */,
 			);
 			path = KakaoBank;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E7E0F7A2A7FAB6C003C1869 /* InputNumberArea.swift in Sources */,
+				3E7E0F7D2A7FD700003C1869 /* Test.swift in Sources */,
 				3E7E0F6E2A7FAB4C003C1869 /* ContentView.swift in Sources */,
 				3E7E0F6C2A7FAB4C003C1869 /* KakaoBankApp.swift in Sources */,
 			);

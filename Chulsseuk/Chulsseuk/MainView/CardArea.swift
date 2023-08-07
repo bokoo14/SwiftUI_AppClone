@@ -11,7 +11,7 @@ struct CardArea: View {
     @State var isFlipped = false
     @State var frontDegree = 0.0
     @State var backDegree = 90.0
-    @State var duration : CGFloat = 0.3
+    @State var duration : CGFloat = 0.3 // 지속 시간
     
     func flip() {
         isFlipped.toggle()
@@ -32,7 +32,7 @@ struct CardArea: View {
                 frontDegree = 0
             }
         }
-    }
+    } // func flip()
     
     var body: some View {
         ZStack { // ZStack
@@ -83,6 +83,15 @@ struct CardFront: View {
     }
 }
 
+/**
+ [Note]
+ 처음 방식: Rectangle( ) .shadow( ) .overlay { }
+ 이 방식으로 하게 되면 frame의 width와 height를 지정해줘야함 -> 다양한 기기에 대응을 하지 못한다
+ 
+ 개선된 방식: VStack(spacing: 0) { Image( ).resizable().aspectRatio(.fit) .frame(.infinity) .padding( )} .padding( ) .shadow( )
+ 이 방식대로 하면 이미지의 frame을 상수값 혹은 기기의 퍼센트를 계산해서 넣지 않더라도
+ .padding값을 얼마나 주느냐에 따라서 다양한 기기의 사이즈에 반응형으로 대응할 수 있다!
+ */
 
 struct CardBack: View {
     @Binding var backDegree: Double

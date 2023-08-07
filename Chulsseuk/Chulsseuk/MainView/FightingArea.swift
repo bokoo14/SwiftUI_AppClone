@@ -15,10 +15,8 @@ struct FightingArea: View {
             Text("월클 디벨로퍼 \(userName).\n오늘도 화이팅하세요!")
                 .font(.pretendard(.light, size: 18))
                 .lineSpacing(8)
-                //.border(.red)
             Spacer()
         } // HStack
-        //.border(.red)
     }
 }
 
