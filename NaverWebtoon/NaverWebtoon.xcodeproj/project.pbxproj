@@ -30,6 +30,8 @@
 		3E6847532A80925B0082E9D8 /* HeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6847522A80925B0082E9D8 /* HeaderModel.swift */; };
 		3E6847552A80949A0082E9D8 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6847542A80949A0082E9D8 /* ContentModel.swift */; };
 		3E6847572A8097650082E9D8 /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6847562A8097650082E9D8 /* TabModel.swift */; };
+		3E68475A2A80BE740082E9D8 /* GetHeightModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6847592A80BE740082E9D8 /* GetHeightModifier.swift */; };
+		3E68475C2A80C8DA0082E9D8 /* SwiftUITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E68475B2A80C8D90082E9D8 /* SwiftUITestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		3E6847522A80925B0082E9D8 /* HeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderModel.swift; sourceTree = "<group>"; };
 		3E6847542A80949A0082E9D8 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		3E6847562A8097650082E9D8 /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
+		3E6847592A80BE740082E9D8 /* GetHeightModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHeightModifier.swift; sourceTree = "<group>"; };
+		3E68475B2A80C8D90082E9D8 /* SwiftUITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 				3E6847182A807AB10082E9D8 /* NaverWebtoonApp.swift */,
 				3E68471A2A807AB10082E9D8 /* ContentView.swift */,
 				3E6847272A807E140082E9D8 /* View */,
+				3E6847582A80BE4F0082E9D8 /* Modifier */,
 				3E6847512A8092410082E9D8 /* Model */,
 				3E6847262A807DFE0082E9D8 /* Asset */,
 				3E68471E2A807AB20082E9D8 /* Preview Content */,
@@ -184,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				3E68472B2A807E330082E9D8 /* HeaderArea.swift */,
+				3E68475B2A80C8D90082E9D8 /* SwiftUITestView.swift */,
 			);
 			path = HeaderArea;
 			sourceTree = "<group>";
@@ -212,6 +218,14 @@
 				3E6847542A80949A0082E9D8 /* ContentModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3E6847582A80BE4F0082E9D8 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				3E6847592A80BE740082E9D8 /* GetHeightModifier.swift */,
+			);
+			path = Modifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +314,8 @@
 				3E6847532A80925B0082E9D8 /* HeaderModel.swift in Sources */,
 				3E6847342A807E7C0082E9D8 /* ColorExtension.swift in Sources */,
 				3E68471B2A807AB10082E9D8 /* ContentView.swift in Sources */,
+				3E68475A2A80BE740082E9D8 /* GetHeightModifier.swift in Sources */,
+				3E68475C2A80C8DA0082E9D8 /* SwiftUITestView.swift in Sources */,
 				3E6847552A80949A0082E9D8 /* ContentModel.swift in Sources */,
 				3E68472C2A807E330082E9D8 /* HeaderArea.swift in Sources */,
 				3E6847572A8097650082E9D8 /* TabModel.swift in Sources */,
