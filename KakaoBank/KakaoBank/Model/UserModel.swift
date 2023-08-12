@@ -7,7 +7,10 @@
 
 import SwiftUI
 
-struct User{
-    var userName: String
+struct User: Identifiable{
+    var id: UUID = UUID()
+    var userName: String // 나의 이름
+    var bankNumber: String // 계좌번호
+    var totalMoney: Int // 현재 나의 총 잔고
 }
 
