@@ -13,7 +13,7 @@ struct MyPassbookArea: View {
             VStack (spacing: 10){
                 Text("3333-07-6239583")
                     .font(.pretendard(.light, size: 15))
-                    .foregroundColor(Color(hex: 202020).opacity(0.5))
+                    .foregroundColor(Color(hex: 0x202020).opacity(0.5))
 //                    .underline(pattern: .solid, color: Color(hex: 000000).opacity(0.2)) // 0.5 piexel만큼의 밑줄을 만드는 것은 불가능
                     .overlay(
                             Rectangle()
@@ -30,29 +30,31 @@ struct MyPassbookArea: View {
             }
             
             HStack(spacing: 7){
-                Button {
-                    // action
+                NavigationLink {
+                    // destination
                 } label: {
                     Text("이체하기")
-                        .foregroundColor(Color(hex: 202020))
+                        .foregroundColor(Color(hex: 0x202020))
                         .font(.pretendard(.medium, size: 14))
                         .padding(.horizontal, 52)
                         .padding(.top, 18)
                         .padding(.bottom, 16)
-                        .background(Color(hex: 202020).opacity(0.06).cornerRadius(10))
+                        .background(Color(hex: 0x202020).opacity(0.06).cornerRadius(10))
                 }
 
-                Button {
-                    // action
+                NavigationLink {
+                    // destination
+                    LoanView()
                 } label: {
                     Text("대출받기")
-                        .foregroundColor(Color(hex: 202020))
+                        .foregroundColor(Color(hex: 0x202020))
                         .font(.pretendard(.medium, size: 14))
                         .padding(.horizontal, 52)
                         .padding(.top, 18)
                         .padding(.bottom, 16)
-                        .background(Color(hex: 202020).opacity(0.06).cornerRadius(10))
+                        .background(Color(hex: 0x202020).opacity(0.06).cornerRadius(10))
                 }
+
             } // Button HStack
         } // VStack
         .frame(maxWidth: .infinity)
@@ -64,6 +66,8 @@ struct MyPassbookArea: View {
 
 struct MyPassbookArea_Previews: PreviewProvider {
     static var previews: some View {
-        MyPassbookArea()
+        NavigationView {
+            MyPassbookArea()
+        }
     }
 }

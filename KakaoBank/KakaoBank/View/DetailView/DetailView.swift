@@ -22,11 +22,15 @@ struct DetailView: View {
                 Image(systemName: "gear")
             }
         } // toolbar
+        
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView()
+        NavigationView {
+            DetailView()
+                .tint(.black)
+        }
     }
 }
