@@ -17,7 +17,7 @@ struct BannerArea: View {
                     .font(.pretendard(.semibold, size: 14))
             }
             Spacer()
-            Image("profile")
+            Image("ImgCharacter")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 38)
