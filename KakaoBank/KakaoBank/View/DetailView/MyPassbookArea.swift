@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MyPassbookArea: View {
+    @Binding var mainStack: NavigationPath
     var body: some View {
         VStack (spacing: 48){
             VStack (spacing: 10){
@@ -44,7 +45,7 @@ struct MyPassbookArea: View {
 
                 NavigationLink {
                     // destination
-                    LoanView()
+                    LoanView(mainStack: $mainStack)
                 } label: {
                     Text("대출받기")
                         .foregroundColor(Color(hex: 0x202020))
@@ -67,7 +68,7 @@ struct MyPassbookArea: View {
 struct MyPassbookArea_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            MyPassbookArea()
+            MyPassbookArea(mainStack: .constant(NavigationPath()))
         }
     }
 }

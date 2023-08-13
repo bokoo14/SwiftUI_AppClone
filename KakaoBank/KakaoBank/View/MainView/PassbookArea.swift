@@ -9,14 +9,15 @@ import SwiftUI
 
 struct PassbookArea: View {
     @State private var isDetailViewActive = false // DetailView로 이동 여부를 추적하는 상태 변수
+    @State var totalMoney: Int = 300000000
+    @Binding var mainStack: NavigationPath
+    
     var body: some View {
         VStack (spacing: 0){
-            NavigationLink {
-                DetailView()
-            } label: {
+            NavigationLink(value: totalMoney) {
                 VStack (spacing: 6){
                     HStack (spacing: 8){
-                        Image("profile")
+                        Image("ImgProfile04")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 34)
@@ -24,7 +25,7 @@ struct PassbookArea: View {
                         VStack (alignment: .leading, spacing: 6){
                             Text("박보경의 통장★")
                                 .font(.pretendard(.light, size: 14))
-                            Text("0원")
+                            Text("\(totalMoney)원")
                                 .font(.pretendard(.bold, size: 19))
                         }
                         Spacer()
@@ -52,11 +53,60 @@ struct PassbookArea: View {
                                 .cornerRadius(30)
                         }
                     } // HStack
-                }
-            }.tint(Color.black)
-            // NavigationLink
-
-
+                } // VStack
+            } // NavigationLink
+            .navigationDestination(for: Int.self) { value in
+                DetailView(mainStack: $mainStack)
+            }
+            .tint(Color.kakaoBlack300)
+            
+            
+            //            NavigationLink {
+            //                DetailView()
+            //            } label: {
+            //                VStack (spacing: 6){
+            //                    HStack (spacing: 8){
+            //                        Image("ImgProfile04")
+            //                            .resizable()
+            //                            .aspectRatio(contentMode: .fit)
+            //                            .frame(width: 34)
+            //                            .cornerRadius(100)
+            //                        VStack (alignment: .leading, spacing: 6){
+            //                            Text("박보경의 통장★")
+            //                                .font(.pretendard(.light, size: 14))
+            //                            Text("\(totalMoney)원")
+            //                                .font(.pretendard(.bold, size: 19))
+            //                        }
+            //                        Spacer()
+            //                    }
+            //                    HStack (spacing: 10){
+            //                        Spacer()
+            //                        Button {
+            //                            // action
+            //                        } label: {
+            //                            Text("카드")
+            //                                .font(.pretendard(.medium, size: 13))
+            //                                .padding(.vertical, 9)
+            //                                .padding(.horizontal, 16)
+            //                                .background(Color.kakaoBlack200.opacity(0.05))
+            //                                .cornerRadius(30)
+            //                        }
+            //                        Button {
+            //                            // action
+            //                        } label: {
+            //                            Text("이체")
+            //                                .font(.pretendard(.medium, size: 13))
+            //                                .padding(.vertical, 9)
+            //                                .padding(.horizontal, 16)
+            //                                .background(Color.kakaoBlack200.opacity(0.05))
+            //                                .cornerRadius(30)
+            //                        }
+            //                    } // HStack
+            //                }
+            //            }.tint(Color.black)
+            //            // NavigationLink
+            
+            
             Divider()
                 .padding(.vertical, 20)
             
@@ -90,8 +140,8 @@ struct PassbookArea2: View {
 
 struct PassbookArea_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            PassbookArea()
+        NavigationStack {
+            PassbookArea(mainStack: .constant(NavigationPath()))
         }
         PassbookArea2()
     }

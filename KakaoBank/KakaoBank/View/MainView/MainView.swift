@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct MainView: View {
+    @State var mainStack = NavigationPath()
+    
     var body: some View {
-        NavigationView {
+        NavigationStack(path: $mainStack) {
             VStack (spacing: 0){
                 HeaderArea()
                     .padding(.bottom, 10)
@@ -17,13 +19,13 @@ struct MainView: View {
                 ScrollView{
                     VStack (spacing: 8){
                         BannerArea()
-                        PassbookArea()
+                        PassbookArea(mainStack: $mainStack)
                         PassbookArea2()
                         BottomOptionArea()
                     }
                 } // ScrollView
-            }
-        } // NavigationView
+            } // VStack
+        } // NavigationStack
     }
 }
 

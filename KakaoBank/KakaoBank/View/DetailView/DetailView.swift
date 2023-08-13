@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct DetailView: View {
+    @Binding var mainStack: NavigationPath
     var body: some View {
         VStack(spacing: 0){
-            MyPassbookArea()
+            MyPassbookArea(mainStack: $mainStack)
             TransactionDetailArea()
         }
         .navigationTitle("카뱅")
@@ -33,7 +34,7 @@ struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DetailView()
+            DetailView(mainStack: .constant(NavigationPath()))
                 .tint(.black)
         }
     }
