@@ -8,20 +8,28 @@
 import SwiftUI
 
 struct InputArea: View {
-    @State var currentMoney: Int = 50000
+    @State var currentMoney: Int = 0
     var body: some View {
-        HStack (spacing: 2){
-            Text("\(currentMoney)")
-                .foregroundColor(Color.kakaoBlack200)
-                .font(.pretendard(.semibold, size: 48))
-            Text("원")
-                .foregroundColor(Color.kakaoBlack200)
-                .font(.pretendard(.semibold, size: 38))
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 118)
-        .border(.red)
-        
+        VStack (spacing: 0){
+            Spacer()
+            HStack (spacing: 2){
+                if currentMoney <= 0 {
+                    Text("대출금액")
+                        .foregroundColor(Color.kakaoGray100)
+                        .font(.pretendard(.medium, size: 36))
+                } else {
+                    Text("\(currentMoney)")
+                        .foregroundColor(Color.kakaoBlack200)
+                        .font(.pretendard(.semibold, size: 48))
+                    Text("원")
+                        .foregroundColor(Color.kakaoBlack200)
+                        .font(.pretendard(.semibold, size: 38))
+                }
+            } // HStack
+            .frame(maxWidth: .infinity)
+            //.padding(.vertical, 118)
+            Spacer()
+        } // VStack
     }
 }
 
