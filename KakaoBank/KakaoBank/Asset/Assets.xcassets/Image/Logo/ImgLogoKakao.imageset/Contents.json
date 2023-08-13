@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "ImgLogoKakao.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "ImgLogoKakao.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
