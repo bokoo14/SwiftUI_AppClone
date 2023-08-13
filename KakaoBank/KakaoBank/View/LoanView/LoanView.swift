@@ -9,8 +9,12 @@ import SwiftUI
 
 struct LoanView: View {
     var body: some View {
-        VStack (spacing: 0){
-            
+        VStack (spacing: 12){
+            InputArea()
+            BalanceArea()
+            addValueBtn()
+            numberKeyArea()
+            nextBtn(isCorrectNumber: true)
         }
         .navigationTitle("대출받기")
         .navigationBarTitleDisplayMode(.inline)
@@ -19,7 +23,12 @@ struct LoanView: View {
                 Button {
                     // action
                 } label: {
-                    Image(systemName: "gear")
+                    // MARK: 이거 font로 하는게 맞을까 frame으로 하는게 맞을까?
+                    Image(systemName: "gearshape")
+                    //.font(.system(size: 20))
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 25)
                 }
             }
         } // toolbar
