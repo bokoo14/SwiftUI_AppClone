@@ -19,7 +19,11 @@ struct DetailView: View {
             Button {
                 // action
             } label: {
-                Image(systemName: "gear")
+                Image(systemName: "gearshape")
+                //.font(.system(size: 20))
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 25)
             }
         } // toolbar
         

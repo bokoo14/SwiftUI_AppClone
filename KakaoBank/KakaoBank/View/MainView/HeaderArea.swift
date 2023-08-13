@@ -21,7 +21,7 @@ struct HeaderArea: View {
                 .cornerRadius(14)
             
             Spacer()
-            Image("profile")
+            Image("ImgProfile04")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 40)
