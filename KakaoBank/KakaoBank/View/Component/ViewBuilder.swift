@@ -9,9 +9,10 @@ import SwiftUI
 
 // MARK: LoanView
 @ViewBuilder
-func nextBtn(isCorrectNumber: Bool) -> some View {
+func nextBtn(isCorrectNumber: Bool, actionFunc: @escaping ()->Void) -> some View {
     Button {
         // action
+        actionFunc()
     } label: {
         Text("다음")
             .foregroundColor(Color.kakaoGray200)
@@ -90,12 +91,36 @@ func numberBtn(btnNumberText: String, btnNumberAlignment: Alignment) -> some Vie
             .frame(maxWidth: .infinity, alignment: btnNumberAlignment)
         //.border(.red)
     }
-
 }
+
+// MARK: LoanComplete
+@ViewBuilder
+func completeBtn(actionFunc: @escaping ()->Void) -> some View {
+    Button {
+        // action
+        actionFunc()
+    } label: {
+        Text("확인")
+            .foregroundColor(Color.kakaoBlack300)
+            .font(.pretendard(.medium, size: 16))
+            .padding(.vertical, 20)
+            .frame(maxWidth: .infinity)
+            .background(Color.kakaoYellow.cornerRadius(10))
+            .padding(.horizontal, 16)
+    }
+}
+
+
+
 struct ViewBuilder_Previews: PreviewProvider {
     static var previews: some View {
-        nextBtn(isCorrectNumber: true)
+        nextBtn(isCorrectNumber: false) {
+            
+        }
         addValueBtn()
         numberBtn(btnNumberText: "1", btnNumberAlignment: .leading)
+        completeBtn {
+            
+        }
     }
 }
