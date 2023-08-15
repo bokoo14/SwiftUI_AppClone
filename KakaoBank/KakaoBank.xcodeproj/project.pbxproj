@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E62628A2A8B59DD0038174C /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6262892A8B59DD0038174C /* ListView.swift */; };
+		3E62628C2A8B75BF0038174C /* TransferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E62628B2A8B75BF0038174C /* TransferView.swift */; };
+		3E62628E2A8B76430038174C /* TransferCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E62628D2A8B76430038174C /* TransferCompleteView.swift */; };
+		3E6262902A8B784C0038174C /* TransferModalArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E62628F2A8B784C0038174C /* TransferModalArea.swift */; };
 		3E7E0F6C2A7FAB4C003C1869 /* KakaoBankApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7E0F6B2A7FAB4C003C1869 /* KakaoBankApp.swift */; };
 		3E7E0F6E2A7FAB4C003C1869 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7E0F6D2A7FAB4C003C1869 /* ContentView.swift */; };
 		3E7E0F702A7FAB4D003C1869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E7E0F6F2A7FAB4D003C1869 /* Assets.xcassets */; };
@@ -46,6 +50,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E6262892A8B59DD0038174C /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		3E62628B2A8B75BF0038174C /* TransferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferView.swift; sourceTree = "<group>"; };
+		3E62628D2A8B76430038174C /* TransferCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferCompleteView.swift; sourceTree = "<group>"; };
+		3E62628F2A8B784C0038174C /* TransferModalArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferModalArea.swift; sourceTree = "<group>"; };
 		3E7E0F682A7FAB4C003C1869 /* KakaoBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E7E0F6B2A7FAB4C003C1869 /* KakaoBankApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoBankApp.swift; sourceTree = "<group>"; };
 		3E7E0F6D2A7FAB4C003C1869 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -183,6 +191,7 @@
 		3E9549FC2A87A6A400F3D9E0 /* ListView */ = {
 			isa = PBXGroup;
 			children = (
+				3E6262892A8B59DD0038174C /* ListView.swift */,
 			);
 			path = ListView;
 			sourceTree = "<group>";
@@ -190,6 +199,8 @@
 		3E9549FD2A87A6B200F3D9E0 /* TransferView */ = {
 			isa = PBXGroup;
 			children = (
+				3E62628B2A8B75BF0038174C /* TransferView.swift */,
+				3E62628F2A8B784C0038174C /* TransferModalArea.swift */,
 			);
 			path = TransferView;
 			sourceTree = "<group>";
@@ -197,6 +208,7 @@
 		3E9549FE2A87A6D700F3D9E0 /* TransferCompleteView */ = {
 			isa = PBXGroup;
 			children = (
+				3E62628D2A8B76430038174C /* TransferCompleteView.swift */,
 			);
 			path = TransferCompleteView;
 			sourceTree = "<group>";
@@ -365,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E954A2D2A87C72B00F3D9E0 /* TransactionDetailArea.swift in Sources */,
+				3E62628C2A8B75BF0038174C /* TransferView.swift in Sources */,
 				3E7E0F7A2A7FAB6C003C1869 /* InputNumberArea.swift in Sources */,
 				3E954A052A87ABA800F3D9E0 /* UserModel.swift in Sources */,
 				3E954A022A87AB5800F3D9E0 /* HeaderArea.swift in Sources */,
@@ -378,12 +391,15 @@
 				3EF0A0B32A8956920029F778 /* UserViewModel.swift in Sources */,
 				3EF0A0AE2A88DF270029F778 /* LoanModalArea.swift in Sources */,
 				3E954A292A87C2C400F3D9E0 /* DetailView.swift in Sources */,
+				3E62628A2A8B59DD0038174C /* ListView.swift in Sources */,
 				3E954A0D2A87AF0400F3D9E0 /* FontExtension.swift in Sources */,
+				3E6262902A8B784C0038174C /* TransferModalArea.swift in Sources */,
 				3E954A272A87BFE800F3D9E0 /* BottomOptionArea.swift in Sources */,
 				3E954A342A87E6C500F3D9E0 /* BalanceArea.swift in Sources */,
 				3E954A392A87EE5000F3D9E0 /* numberKeyArea.swift in Sources */,
 				3E954A2B2A87C67300F3D9E0 /* MyPassbookArea.swift in Sources */,
 				3E954A322A87E6BA00F3D9E0 /* InputArea.swift in Sources */,
+				3E62628E2A8B76430038174C /* TransferCompleteView.swift in Sources */,
 				3EF0A0B52A895B120029F778 /* AccountModel.swift in Sources */,
 				3E954A252A87B82700F3D9E0 /* PassbookArea.swift in Sources */,
 				3E954A002A87AA6300F3D9E0 /* MainView.swift in Sources */,

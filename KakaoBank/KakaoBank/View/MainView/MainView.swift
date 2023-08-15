@@ -13,8 +13,8 @@ struct MainView: View {
     var body: some View {
         NavigationStack(path: $mainStack) {
             VStack (spacing: 0){
-                HeaderArea()
-                    .padding(.bottom, 10)
+                HeaderArea(userVM: UserViewModel())
+                    //.padding(.bottom, 10)
                 
                 ScrollView{
                     VStack (spacing: 8){
@@ -32,6 +32,7 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+            .environmentObject(UserViewModel())
             .tint(.black)
     }
 }

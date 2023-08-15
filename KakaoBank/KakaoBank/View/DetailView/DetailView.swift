@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct DetailView: View {
+    @EnvironmentObject var userVM: UserViewModel
     @Binding var mainStack: NavigationPath
+    
     var body: some View {
         VStack(spacing: 0){
             MyPassbookArea(mainStack: $mainStack)
@@ -36,6 +38,7 @@ struct DetailView_Previews: PreviewProvider {
         NavigationView {
             DetailView(mainStack: .constant(NavigationPath()))
                 .tint(.black)
+                .environmentObject(UserViewModel())
         }
     }
 }

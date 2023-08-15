@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct HeaderArea: View {
+    @StateObject var userVM: UserViewModel
+    
     var body: some View {
         HStack (spacing: 6){
-            Text("박보경")
+            Text(userVM.user.userName)
                 .font(.pretendard(.semibold, size: 23))
             
             Text("내 계좌")
@@ -21,7 +23,7 @@ struct HeaderArea: View {
                 .cornerRadius(14)
             
             Spacer()
-            Image("ImgProfile04")
+            Image(userVM.user.userProfileTitle)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 40)
@@ -38,6 +40,8 @@ struct HeaderArea: View {
 
 struct HeaderArea_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderArea()
+        HeaderArea(userVM: UserViewModel())
+            .environmentObject(UserViewModel())
+        // environmentObject가 강제적으로 UserViewModel()임을 알려줌
     }
 }
