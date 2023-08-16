@@ -20,7 +20,10 @@ struct BannerArea: View {
             Image("ImgCharacter")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                //.scaledToFit()
+                //.padding(.vertical, 8)
                 .frame(width: 38)
+                //.scaleEffect(0.6)
         }
         .padding(EdgeInsets(top: 8, leading: 24, bottom: 8, trailing: 20))
         .background(

@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var userVM: UserViewModel
     @State var selectedTab: Int = 0
     var body: some View {
         TabView(selection: $selectedTab) {
             MainView()
                 .tabItem({
                     Image(selectedTab == 0 ? "ImgIcon01" : "ImgIcon01_2")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 24)
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .frame(width: 24)
                 })
+                //.environmentObject(userVM)
                 .tag(0)
             
             TestView()
