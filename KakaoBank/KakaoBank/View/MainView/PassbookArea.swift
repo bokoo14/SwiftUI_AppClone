@@ -9,13 +9,12 @@ import SwiftUI
 
 struct PassbookArea: View {
     @EnvironmentObject var userVM: UserViewModel
-    
     @State private var isDetailViewActive = false // DetailView로 이동 여부를 추적하는 상태 변수
     @Binding var mainStack: NavigationPath
     
     var body: some View {
         VStack (spacing: 0){
-            NavigationLink(value: userVM.user.totalMoney) {
+            NavigationLink(value: 0) {
                 VStack (spacing: 6){
                     HStack (spacing: 8){
                         Image(userVM.user.userProfileTitle)

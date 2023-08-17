@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HeaderArea: View {
-    @StateObject var userVM: UserViewModel
+    @EnvironmentObject var userVM: UserViewModel
     
     var body: some View {
         HStack (spacing: 6){
@@ -40,7 +40,7 @@ struct HeaderArea: View {
 
 struct HeaderArea_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderArea(userVM: UserViewModel())
+        HeaderArea()
             .environmentObject(UserViewModel())
         // environmentObject가 강제적으로 UserViewModel()임을 알려줌
     }

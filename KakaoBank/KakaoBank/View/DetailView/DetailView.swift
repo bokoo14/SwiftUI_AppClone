@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DetailView: View {
-    @EnvironmentObject var userVM: UserViewModel
+//    @EnvironmentObject var userVM: UserViewModel
     @Binding var mainStack: NavigationPath
     
     var body: some View {

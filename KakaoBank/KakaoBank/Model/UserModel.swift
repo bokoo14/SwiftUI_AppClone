@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct User: Identifiable{
+struct User: Identifiable {
     var id: UUID = UUID()
     var userName: String // 사용자의 이름
     var userProfileTitle: String // 사용자의 프로필 이미지 이름
