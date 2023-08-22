@@ -62,11 +62,11 @@ extension PresentationDetent {
     static let sheetSize = Self.height(UIScreen.main.bounds.height * 0.4)
 }
 
-struct LoanView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            LoanView(mainStack: .constant(NavigationPath()))
-        }
-        .tint(.black)
-    }
-}
+//struct LoanView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationView {
+//            LoanView(mainStack: .constant(NavigationPath()))
+//        }
+//        .tint(.black)
+//    }
+//}

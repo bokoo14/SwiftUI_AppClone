@@ -93,10 +93,10 @@ struct PassbookArea2: View {
 
 struct PassbookArea_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
-            PassbookArea(mainStack: .constant(NavigationPath()))
-                .environmentObject(UserViewModel())
-        }
+        
+        PassbookArea(mainStack: .constant(NavigationPath()))
+            .environmentObject(UserViewModel())
+        
         
         PassbookArea2()
     }

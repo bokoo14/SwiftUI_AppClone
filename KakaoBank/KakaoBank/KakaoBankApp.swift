@@ -10,11 +10,15 @@ import SwiftUI
 @main
 struct KakaoBankApp: App {
     // 처음 ViewModel을 초기화할때는 @StateObject로 불러오기
-    // @StateObject var userVM = UserViewModel()
+    @StateObject var userVM = UserViewModel()
+    @StateObject var AccountVM = AccountViewModel()
     
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(UserViewModel())
+            ContentView()
+                .environmentObject(userVM)
+                .environmentObject(AccountVM)
+                //.environmentObject(UserViewModel())
         }
     }
 }

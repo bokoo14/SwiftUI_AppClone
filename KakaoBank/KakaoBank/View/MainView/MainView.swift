@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MainView: View {
-//    @EnvironmentObject var userVM: UserViewModel
     @State var mainStack = NavigationPath()
     
     var body: some View {
@@ -23,7 +22,6 @@ struct MainView: View {
                         BannerArea()
                             .padding(.top, 10)
                         PassbookArea(mainStack: $mainStack)
-//                            .environmentObject(userVM)
                         PassbookArea2()
                         BottomOptionArea()
                     }

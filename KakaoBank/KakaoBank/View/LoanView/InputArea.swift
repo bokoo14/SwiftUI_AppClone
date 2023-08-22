@@ -30,6 +30,7 @@ struct InputArea: View {
             //.padding(.vertical, 118)
             Spacer()
         } // VStack
+        .border(.red)
     }
 }
 
