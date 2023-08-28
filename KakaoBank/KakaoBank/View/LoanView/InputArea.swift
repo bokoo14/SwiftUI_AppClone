@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct InputArea: View {
-    @State var currentMoney: Int = 0
+    @State var currentMoney: Int = 0 // 현재 금액
+    
+    @Binding var inputNumber: String
+    
     var body: some View {
         VStack (spacing: 0){
             Spacer()
             HStack (spacing: 2){
-                if currentMoney <= 0 {
+                if inputNumber == "" { // 빈 문자열이라면 대출금액
                     Text("대출금액")
                         .foregroundColor(Color.kakaoGray100)
                         .font(.pretendard(.medium, size: 36))
-                } else {
+                } else { // 빈 문자열이 아니라면, 금액을 보여줌
                     Text("\(currentMoney)")
                         .foregroundColor(Color.kakaoBlack200)
                         .font(.pretendard(.semibold, size: 48))
@@ -27,7 +30,6 @@ struct InputArea: View {
                 }
             } // HStack
             .frame(maxWidth: .infinity)
-            //.padding(.vertical, 118)
             Spacer()
         } // VStack
         .border(.red)
@@ -36,6 +38,6 @@ struct InputArea: View {
 
 struct InputArea_Previews: PreviewProvider {
     static var previews: some View {
-        InputArea()
+        InputArea(inputNumber: .constant(""))
     }
 }

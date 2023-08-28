@@ -13,12 +13,15 @@ struct TransferView: View {
     @State var isLoanOk: Bool = false
     @Binding var mainStack: NavigationPath
     
+    @State var inputNumber: String = "" // 버튼을 눌렀을때 저장되는 값
+    
     var body: some View {
         VStack (spacing: 12){
-            InputArea()
+            InputArea(inputNumber: $inputNumber) // 대출 금액
+            
             BalanceArea()
             addValueBtn()
-            numberKeyArea()
+            numberKeyArea(inputNumber: $inputNumber)
             nextBtn(isCorrectNumber: true, actionFunc: showModal)
             
             if isLoanOk {
@@ -62,6 +65,7 @@ struct TransferView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             TransferView(mainStack: .constant(NavigationPath()))
+                .environmentObject(UserViewModel())
         }
         .tint(.black)
     }
