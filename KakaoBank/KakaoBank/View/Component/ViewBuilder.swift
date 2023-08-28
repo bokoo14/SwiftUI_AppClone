@@ -26,6 +26,7 @@ func nextBtn(isCorrectNumber: Bool, actionFunc: @escaping ()->Void) -> some View
     .disabled(!isCorrectNumber) // isCorrectNumber가 false일 때 버튼 비활성화
 }
 
+// MARK: frame을 infinity로 주고, spacing을 주자
 @ViewBuilder
 func addValueBtn() -> some View {
     HStack (spacing: 0){
@@ -75,7 +76,7 @@ func addValueBtn() -> some View {
 }
 
 
-// MARK: LoanView
+// MARK: LoanView -> numberKeyArea
 @ViewBuilder
 func numberBtn(btnNumberText: String, btnNumberAlignment: Alignment) -> some View {
     Button {
@@ -85,11 +86,11 @@ func numberBtn(btnNumberText: String, btnNumberAlignment: Alignment) -> some Vie
             .foregroundColor(Color.kakaoGray300)
             .font(.pretendard(.medium, size: 22))
             .frame(width: 70)
-        //.border(.blue)
+        .border(.blue)
             .padding(.top, 27)
             .padding(.bottom, 7)
             .frame(maxWidth: .infinity, alignment: btnNumberAlignment)
-        //.border(.red)
+        .border(.red)
     }
 }
 
