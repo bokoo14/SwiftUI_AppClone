@@ -28,10 +28,15 @@ func nextBtn(isCorrectNumber: Bool, actionFunc: @escaping ()->Void ) -> some Vie
 
 // MARK: frame을 infinity로 주고, spacing을 주자
 @ViewBuilder
-func addValueBtn() -> some View {
+func addValueBtn(inputNumber: Binding<String>) -> some View {
+    var inputNumberInt = Int(inputNumber.wrappedValue) ?? 0
     HStack (spacing: 0){
         Button {
             // action
+            let result = inputNumberInt + 10000
+            if result <= 999999999{
+                inputNumber.wrappedValue = String(result)
+            }
         } label: {
             Text("+1만")
                 .foregroundColor(Color.kakaoGray300)
@@ -46,6 +51,10 @@ func addValueBtn() -> some View {
         Spacer()
         Button {
             // action
+            let result = inputNumberInt + 50000
+            if result <= 999999999{
+                inputNumber.wrappedValue = String(result)
+            }
         } label: {
             Text("+5만")
                 .foregroundColor(Color.kakaoGray300)
@@ -60,6 +69,10 @@ func addValueBtn() -> some View {
         Spacer()
         Button {
             // action
+            let result = inputNumberInt + 100000
+            if result <= 999999999{
+                inputNumber.wrappedValue = String(result)
+            }
         } label: {
             Text("+10만")
                 .foregroundColor(Color.kakaoGray300)
@@ -120,7 +133,7 @@ struct ViewBuilder_Previews: PreviewProvider {
     static var previews: some View {
         nextBtn(isCorrectNumber: false) {}
         
-        addValueBtn()
+        addValueBtn(inputNumber: .constant("1"))
         
         numberBtn(btnNumberText: "1", btnNumberAlignment: .leading, inputNumber: .constant("1")) { text, binding in
             // 클로저 내부의 코드 작성

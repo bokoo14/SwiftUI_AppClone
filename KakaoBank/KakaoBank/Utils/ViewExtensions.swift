@@ -25,13 +25,8 @@ extension View {
 }
 
 
-
-
 struct ViewExtensions_Previews: PreviewProvider {
     static var previews: some View {
         ViewExtensions()
     }
 }
-
-
-

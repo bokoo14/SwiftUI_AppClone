@@ -19,7 +19,7 @@ struct LoanView: View {
             InputArea(inputNumber: $inputNumber) // 대출 금액
                 .overlay { // alignment: .center
                     if (StringToInt(StringMoney: inputNumber) >= 10000) { // 1만원 이상이라면 만원대의 금액부터 단위 문구를 나타냄
-                        Text("\(StringToInt(StringMoney: inputNumber))원")
+                        Text("\(StringToInt(StringMoney: inputNumber)/10000)만 \(StringToInt(StringMoney: inputNumber)%10000)원")
                             .font(.pretendard(.medium, size: 13))
                             .foregroundColor(.kakaoGray200)
                             .offset(y: 24 + 20)
@@ -30,8 +30,7 @@ struct LoanView: View {
             // 여기서 preview 오류남 -> preview에서 .environmentObject(UserViewModel()) 해줘야 함
             BalanceArea() // 잔액
                 
-            
-            addValueBtn() // +1만, +5만, +10만
+            addValueBtn(inputNumber: $inputNumber) // +1만, +5만, +10만
             numberKeyArea(inputNumber: $inputNumber) // 키패드
             nextBtn(isCorrectNumber: isLoanOk, actionFunc: showModal)
             

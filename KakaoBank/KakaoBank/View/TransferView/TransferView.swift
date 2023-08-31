@@ -20,7 +20,7 @@ struct TransferView: View {
             InputArea(inputNumber: $inputNumber) // 대출 금액
             
             BalanceArea()
-            addValueBtn()
+            addValueBtn(inputNumber: $inputNumber)
             numberKeyArea(inputNumber: $inputNumber)
             nextBtn(isCorrectNumber: true, actionFunc: showModal)
             
