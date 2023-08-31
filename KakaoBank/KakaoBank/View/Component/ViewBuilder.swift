@@ -9,7 +9,7 @@ import SwiftUI
 
 // MARK: LoanView
 @ViewBuilder
-func nextBtn(isCorrectNumber: Bool, actionFunc: @escaping ()->Void) -> some View {
+func nextBtn(isCorrectNumber: Bool, actionFunc: @escaping ()->Void ) -> some View {
     Button {
         // action
         actionFunc()
@@ -76,11 +76,12 @@ func addValueBtn() -> some View {
 }
 
 
-// MARK: LoanView -> numberKeyArea
+// MARK: LoanView, TransferView -> numberKeyArea
 @ViewBuilder
-func numberBtn(btnNumberText: String, btnNumberAlignment: Alignment) -> some View {
+func numberBtn(btnNumberText: String, btnNumberAlignment: Alignment, inputNumber: Binding<String>, btnPressed: @escaping (String, Binding<String>)->Void) -> some View {
+    
     Button {
-        // action
+        btnPressed(btnNumberText, inputNumber)
     } label: {
         Text(btnNumberText)
             .foregroundColor(Color.kakaoGray300)
@@ -114,14 +115,17 @@ func completeBtn(actionFunc: @escaping ()->Void) -> some View {
 
 
 struct ViewBuilder_Previews: PreviewProvider {
+//    func action(_ btnNumberText: String, _ inputNumber: Binding<String>) {
+//    }
     static var previews: some View {
-        nextBtn(isCorrectNumber: false) {
-            
-        }
+        nextBtn(isCorrectNumber: false) {}
+        
         addValueBtn()
-        numberBtn(btnNumberText: "1", btnNumberAlignment: .leading)
-        completeBtn {
-            
+        
+        numberBtn(btnNumberText: "1", btnNumberAlignment: .leading, inputNumber: .constant("1")) { text, binding in
+            // 클로저 내부의 코드 작성
         }
+
+        completeBtn {}
     }
 }

@@ -17,23 +17,25 @@ struct LoanView: View {
     var body: some View {
         VStack (spacing: 12){
             InputArea(inputNumber: $inputNumber) // 대출 금액
-            
-            // 여기서 preview 오류남 -> preview에서 .environmentObject(UserViewModel()) 해줘야 함
-            BalanceArea() // 잔액
                 .overlay { // alignment: .center
                     if (StringToInt(StringMoney: inputNumber) >= 10000) { // 1만원 이상이라면 만원대의 금액부터 단위 문구를 나타냄
-                        Text("1만원 이상~")
+                        Text("\(StringToInt(StringMoney: inputNumber))원")
                             .font(.pretendard(.medium, size: 13))
                             .foregroundColor(.kakaoGray200)
+                            .offset(y: 24 + 20)
+                        // (Text의 크기 48)/2 + (spacing값 20)
                     }
                 }
             
+            // 여기서 preview 오류남 -> preview에서 .environmentObject(UserViewModel()) 해줘야 함
+            BalanceArea() // 잔액
+                
             
             addValueBtn() // +1만, +5만, +10만
             numberKeyArea(inputNumber: $inputNumber) // 키패드
             nextBtn(isCorrectNumber: isLoanOk, actionFunc: showModal)
             
-            // 대출이 가능하다면?
+            // MARK: 대출이 가능하다면?
             if isLoanOk {
                 Text("대출 가능~")
             }
@@ -69,14 +71,6 @@ struct LoanView: View {
     func showModal() {
         isShowModal = true
     }
-    
-    // 금액 String을 Int로 변환
-    func StringToInt(StringMoney: String) -> Int {
-        var IntMoney: Int
-        IntMoney = Int(StringMoney) ?? 0
-        return IntMoney
-    }
-    
 }
 
 // Sheet Size Custom

@@ -42,6 +42,8 @@
 		3E954A342A87E6C500F3D9E0 /* BalanceArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E954A332A87E6C500F3D9E0 /* BalanceArea.swift */; };
 		3E954A372A87E72800F3D9E0 /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E954A362A87E72800F3D9E0 /* ViewBuilder.swift */; };
 		3E954A392A87EE5000F3D9E0 /* numberKeyArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E954A382A87EE5000F3D9E0 /* numberKeyArea.swift */; };
+		3EE4A7572AA02C1F008D93AF /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE4A7562AA02C1F008D93AF /* ViewExtensions.swift */; };
+		3EE4A7592AA031D5008D93AF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE4A7582AA031D5008D93AF /* Extensions.swift */; };
 		3EF0A0AE2A88DF270029F778 /* LoanModalArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF0A0AD2A88DF270029F778 /* LoanModalArea.swift */; };
 		3EF0A0B02A88FB480029F778 /* LoanCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF0A0AF2A88FB480029F778 /* LoanCompleteView.swift */; };
 		3EF0A0B32A8956920029F778 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF0A0B22A8956920029F778 /* UserViewModel.swift */; };
@@ -87,6 +89,8 @@
 		3E954A332A87E6C500F3D9E0 /* BalanceArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceArea.swift; sourceTree = "<group>"; };
 		3E954A362A87E72800F3D9E0 /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
 		3E954A382A87EE5000F3D9E0 /* numberKeyArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numberKeyArea.swift; sourceTree = "<group>"; };
+		3EE4A7562AA02C1F008D93AF /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		3EE4A7582AA031D5008D93AF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3EF0A0AD2A88DF270029F778 /* LoanModalArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanModalArea.swift; sourceTree = "<group>"; };
 		3EF0A0AF2A88FB480029F778 /* LoanCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanCompleteView.swift; sourceTree = "<group>"; };
 		3EF0A0B22A8956920029F778 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 		3E7E0F6A2A7FAB4C003C1869 /* KakaoBank */ = {
 			isa = PBXGroup;
 			children = (
+				3EE4A7552AA02C13008D93AF /* Utils */,
 				3E954A212A87AF8D00F3D9E0 /* Info.plist */,
 				3E7E0F6B2A7FAB4C003C1869 /* KakaoBankApp.swift */,
 				3E7E0F6D2A7FAB4C003C1869 /* ContentView.swift */,
@@ -297,6 +302,15 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		3EE4A7552AA02C13008D93AF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3EE4A7562AA02C1F008D93AF /* ViewExtensions.swift */,
+				3EE4A7582AA031D5008D93AF /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -395,6 +409,7 @@
 				3E954A0D2A87AF0400F3D9E0 /* FontExtension.swift in Sources */,
 				3E6262902A8B784C0038174C /* TransferModalArea.swift in Sources */,
 				3E954A272A87BFE800F3D9E0 /* BottomOptionArea.swift in Sources */,
+				3EE4A7592AA031D5008D93AF /* Extensions.swift in Sources */,
 				3E954A342A87E6C500F3D9E0 /* BalanceArea.swift in Sources */,
 				3E954A392A87EE5000F3D9E0 /* numberKeyArea.swift in Sources */,
 				3E954A2B2A87C67300F3D9E0 /* MyPassbookArea.swift in Sources */,
@@ -404,6 +419,7 @@
 				3E954A252A87B82700F3D9E0 /* PassbookArea.swift in Sources */,
 				3E954A002A87AA6300F3D9E0 /* MainView.swift in Sources */,
 				3E954A302A87E48A00F3D9E0 /* LoanView.swift in Sources */,
+				3EE4A7572AA02C1F008D93AF /* ViewExtensions.swift in Sources */,
 				3E7E0F6C2A7FAB4C003C1869 /* KakaoBankApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

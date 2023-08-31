@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct InputArea: View {
-    @State var currentMoney: Int = 0 // 현재 금액
-    
     @Binding var inputNumber: String
     
     var body: some View {
@@ -21,7 +19,7 @@ struct InputArea: View {
                         .foregroundColor(Color.kakaoGray100)
                         .font(.pretendard(.medium, size: 36))
                 } else { // 빈 문자열이 아니라면, 금액을 보여줌
-                    Text("\(currentMoney)")
+                    Text("\(Int(inputNumber) ?? 0)")
                         .foregroundColor(Color.kakaoBlack200)
                         .font(.pretendard(.semibold, size: 48))
                     Text("원")
