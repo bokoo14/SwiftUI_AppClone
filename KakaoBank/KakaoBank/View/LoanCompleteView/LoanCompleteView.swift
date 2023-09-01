@@ -10,6 +10,7 @@ import SwiftUI
 struct LoanCompleteView: View {
     @State var money: Int = 500000000
     @Binding var mainStack: NavigationPath
+    @Binding var inputNumber: String
     
     var body: some View {
         VStack (spacing: 0){
@@ -22,12 +23,12 @@ struct LoanCompleteView: View {
                     .padding(.horizontal, 13)
                     .background(Color.kakaoYellow.cornerRadius(50))
                 VStack (spacing: 3){
-                    Text("일론 머스크님이")
+                    Text("김예현님이")
                         .foregroundColor(Color.kakaoBlack300)
                         .font(.pretendard(.semibold, size: 24))
                         .padding(.top, 35)
                     HStack (spacing: 0){
-                        Text("\(money)")
+                        Text("\(Int(inputNumber) ?? 0)")
                             .foregroundColor(Color.kakaoBlue300)
                             .font(.pretendard(.semibold, size: 24))
                         Text("원 보냈어요")
@@ -40,6 +41,7 @@ struct LoanCompleteView: View {
             
             Spacer()
             
+            // 확인 버튼을 눌렀을때 
             completeBtn {
                 mainStack = .init()
             }
@@ -49,6 +51,8 @@ struct LoanCompleteView: View {
 
 struct LoanCompleteView_Previews: PreviewProvider {
     static var previews: some View {
-        LoanCompleteView(mainStack: .constant(NavigationPath()))
+        LoanCompleteView(mainStack: .constant(NavigationPath()), inputNumber: .constant("10000000"))
+            .environmentObject(AccountViewModel())
+            .environmentObject(UserViewModel())
     }
 }

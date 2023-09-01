@@ -9,21 +9,24 @@ import SwiftUI
 
 struct LoanModalArea: View {
     @Environment(\.presentationMode) var presentaionMode
-    @State var loanTarget: String = "일론머스크"
-    @State var loanMoney: Int = 500000000
+    
+    @EnvironmentObject var userVM: UserViewModel
+    
+    @State var loanTarget: String = "김예현"
     
     @Binding var isLoanOk: Bool // 대출 완료 뷰로 넘어가기 위한 변수
+    @Binding var inputNumber: String
     
     var body: some View {
         VStack (spacing: 0){
-            Image("ImgProfile02")
+            Image("ImgProfile10")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 50)
             HStack (spacing: 0){
                 Text(loanTarget).font(.pretendard(.medium, size: 20))
                 Text("님에게 ").font(.pretendard(.light, size: 20))
-                Text("\(loanMoney)원").font(.pretendard(.medium, size: 20))
+                Text("\(Int(inputNumber) ?? 0)원").font(.pretendard(.medium, size: 20))
             }
             .padding(.top, 20)
             
@@ -31,7 +34,7 @@ struct LoanModalArea: View {
                 .font(.pretendard(.light, size: 20))
                 .padding(.top, 4)
             
-            Text("받는 계좌: 3333-07-6239583")
+            Text("받는 계좌: \(userVM.user.bankAccount)")
                 .foregroundColor(Color.kakaoGray300)
                 .font(.pretendard(.light, size: 13))
                 .padding(.top, 14)
@@ -49,9 +52,13 @@ struct LoanModalArea: View {
                         .background(Color.kakaoWhite100.cornerRadius(10))
                 }
                 
+                // MARK: 대출받기 버튼을 눌렀을때
+                // MARK: inputNumber를 UserViewModel의 user의 totalMoney를 +해줘야 함!
                 Button {
+                    // action
                     presentaionMode.wrappedValue.dismiss()
                     isLoanOk = true
+                    
                 } label: {
                     Text("대출받기")
                         .foregroundColor(Color.kakaoBlack300)
@@ -60,17 +67,6 @@ struct LoanModalArea: View {
                         .frame(maxWidth: .infinity)
                         .background(Color.kakaoYellow.cornerRadius(10))
                 }
-
-//                Button {
-//                    presentaionMode.wrappedValue.dismiss()
-//                } label: {
-//                    Text("대출받기")
-//                        .foregroundColor(Color.kakaoBlack300)
-//                        .font(.pretendard(.light, size: 16))
-//                        .padding(.vertical, 20)
-//                        .frame(maxWidth: .infinity)
-//                        .background(Color.kakaoYellow.cornerRadius(10))
-//                }
             } // Button HStack
             .padding(.top, 43)
             Spacer()
@@ -83,7 +79,8 @@ struct LoanModalArea: View {
 struct LoaㄴnModalArea_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            LoanModalArea(isLoanOk: .constant(true))
+            LoanModalArea(isLoanOk: .constant(true), inputNumber: .constant("1000000"))
+                .environmentObject(UserViewModel())
         }
     }
 }
