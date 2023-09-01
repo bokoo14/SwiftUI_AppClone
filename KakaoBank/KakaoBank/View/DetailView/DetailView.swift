@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DetailView: View {
 //    @EnvironmentObject var userVM: UserViewModel
+//    @EnvironmentObject var AccountVM: AccountViewModel
     @Binding var mainStack: NavigationPath
     
     var body: some View {
@@ -37,8 +38,9 @@ struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             DetailView(mainStack: .constant(NavigationPath()))
-                .tint(.black)
+                .environmentObject(AccountViewModel())
                 .environmentObject(UserViewModel())
+                .tint(.black)
         }
     }
 }

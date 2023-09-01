@@ -42,6 +42,7 @@ struct HeaderArea_Previews: PreviewProvider {
     static var previews: some View {
         HeaderArea()
             .environmentObject(UserViewModel())
+            .environmentObject(UserViewModel())
         // environmentObject가 강제적으로 UserViewModel()임을 알려줌
     }
 }

@@ -35,6 +35,7 @@ struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
             .environmentObject(UserViewModel())
+            .environmentObject(AccountViewModel())
             .tint(.black)
     }
 }

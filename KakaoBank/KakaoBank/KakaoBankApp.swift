@@ -18,7 +18,6 @@ struct KakaoBankApp: App {
             ContentView()
                 .environmentObject(userVM)
                 .environmentObject(AccountVM)
-                //.environmentObject(UserViewModel())
         }
     }
 }

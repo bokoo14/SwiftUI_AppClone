@@ -63,8 +63,4 @@ extension numberKeyArea {
         }
 
     } // func btnPressed
-    
-    
-    
-    
 } // extension numberKeyArea

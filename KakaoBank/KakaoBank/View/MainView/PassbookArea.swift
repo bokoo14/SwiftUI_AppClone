@@ -95,6 +95,7 @@ struct PassbookArea_Previews: PreviewProvider {
     static var previews: some View {
         PassbookArea(mainStack: .constant(NavigationPath()))
             .environmentObject(UserViewModel())
+            .environmentObject(AccountViewModel())
         
         PassbookArea2()
     }
