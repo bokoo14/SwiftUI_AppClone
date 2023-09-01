@@ -10,13 +10,14 @@ import SwiftUI
 struct MyPassbookArea: View {
     @EnvironmentObject var userVM: UserViewModel
     @Binding var mainStack: NavigationPath
+    
     var body: some View {
         VStack (spacing: 48){
             VStack (spacing: 10){
                 Text(userVM.user.bankAccount)
                     .font(.pretendard(.light, size: 15))
                     .foregroundColor(Color(hex: 0x202020).opacity(0.5))
-//                    .underline(pattern: .solid, color: Color(hex: 000000).opacity(0.2)) // 0.5 piexel만큼의 밑줄을 만드는 것은 불가능
+//                    .underline(pattern: .solid, color: Color(hex: 000000).opacity(0.2)) // 0.5 pixel만큼의 밑줄을 만드는 것은 불가능
                     .overlay(
                             Rectangle()
                                 .frame(height: 0.5) // 얇은 밑줄의 높이를 설정
@@ -71,6 +72,7 @@ struct MyPassbookArea_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             MyPassbookArea(mainStack: .constant(NavigationPath()))
+                .environmentObject(AccountViewModel())
                 .environmentObject(UserViewModel())
         }
     }
