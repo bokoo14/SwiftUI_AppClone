@@ -10,17 +10,27 @@ import SwiftUI
 class AccountViewModel: ObservableObject {
     @Published var account: [AccountModel] = []
     
-    init() {
-        
+    // 현재 시간을 return
+    var date: DateFormatter = {
+          let df = DateFormatter()
+          df.locale = Locale(identifier: "ko_KR")
+          df.timeZone = TimeZone(abbreviation: "KST")
+          df.dateFormat = "YY.MM"
+          return df
+      }()
+    
+    init() { }
+    
+    // MARK: CRUD
+    // MARK: Update - 대출
+    func borrowMoney(targetName: String, currentMoney: Int) {
+        let dateString = date.string(from: Date()) // Convert Date to formatted String
+        account.append(AccountModel(date: dateString, targetName: targetName, describe: "#대출", currentMoney: currentMoney))
     }
     
-    // CRUD
-    // MARK: Update - 대출
-    func borrowMoney() {
-        
-    }
     // MARK: Update - 이체
-    func sendMoney() {
-        
+    func sendMoney(targetName: String, currentMoney: Int) {
+        let dateString = date.string(from: Date()) // Convert Date to formatted String
+        account.append(AccountModel(date: dateString, targetName: targetName, describe: "#이체", currentMoney: currentMoney))
     }
 }
