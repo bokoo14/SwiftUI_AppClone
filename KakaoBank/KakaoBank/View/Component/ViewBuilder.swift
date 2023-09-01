@@ -9,21 +9,21 @@ import SwiftUI
 
 // MARK: LoanView
 @ViewBuilder
-func nextBtn(isCorrectNumber: Bool, actionFunc: @escaping ()->Void ) -> some View {
+func nextBtn(isButtonActive: Bool, actionFunc: @escaping ()->Void ) -> some View {
     Button {
         // action
         actionFunc()
     } label: {
         Text("다음")
-            .foregroundColor(Color.kakaoGray200)
+            .foregroundColor(isButtonActive ? Color.kakaoBlack300 : Color.kakaoGray200)
             .font(.pretendard(.light, size: 16))
             .padding(.vertical, 20)
             .frame(maxWidth: .infinity)
-            .background(isCorrectNumber ? Color.kakaoYellow : Color.kakaoWhite100)
+            .background(isButtonActive ? Color.kakaoYellow : Color.kakaoWhite100)
             .cornerRadius(10)
             .padding(.horizontal, 16)
     }
-    .disabled(!isCorrectNumber) // isCorrectNumber가 false일 때 버튼 비활성화
+    .disabled(!isButtonActive) // isCorrectNumber가 false일 때 버튼 비활성화
 }
 
 // MARK: frame을 infinity로 주고, spacing을 주자
@@ -128,10 +128,9 @@ func completeBtn(actionFunc: @escaping ()->Void) -> some View {
 
 
 struct ViewBuilder_Previews: PreviewProvider {
-//    func action(_ btnNumberText: String, _ inputNumber: Binding<String>) {
-//    }
+
     static var previews: some View {
-        nextBtn(isCorrectNumber: false) {}
+        nextBtn(isButtonActive: false) {}
         
         addValueBtn(inputNumber: .constant("1"))
         

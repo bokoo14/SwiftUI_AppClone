@@ -22,7 +22,7 @@ struct TransferView: View {
             BalanceArea()
             addValueBtn(inputNumber: $inputNumber)
             numberKeyArea(inputNumber: $inputNumber)
-            nextBtn(isCorrectNumber: true, actionFunc: showModal)
+            nextBtn(isButtonActive: true, actionFunc: showModal)
             
             if isLoanOk {
                 
