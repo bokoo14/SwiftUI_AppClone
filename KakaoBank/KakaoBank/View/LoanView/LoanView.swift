@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct LoanView: View {
+    @EnvironmentObject var userVm: UserViewModel
     @State var isShowModal: Bool = false
+    @State var isButtonActive: Bool = false
     @State var isLoanOk: Bool = false
     @Binding var mainStack: NavigationPath
     
@@ -25,27 +27,30 @@ struct LoanView: View {
                             .offset(y: 24 + 20)
                         // (Text의 크기 48)/2 + (spacing값 20)
                     }
-                }
+                } // overlay
             
             // 여기서 preview 오류남 -> preview에서 .environmentObject(UserViewModel()) 해줘야 함
             BalanceArea() // 잔액
-                
+            
+            
             addValueBtn(inputNumber: $inputNumber) // +1만, +5만, +10만
             numberKeyArea(inputNumber: $inputNumber) // 키패드
-            nextBtn(isCorrectNumber: isLoanOk, actionFunc: showModal)
             
-            // MARK: 대출이 가능하다면?
-            if isLoanOk {
-                Text("대출 가능~")
+            // MARK: 하단의 다음 버튼
+            nextBtn(isButtonActive: isButtonActive) {
+                isShowModal = true
+            }
+            .onChange(of: inputNumber) { newValue in
+                isButtonActive = !newValue.isEmpty
             }
             
             // MARK: 대출이 가능하다면
             NavigationLink("", isActive: $isLoanOk, destination: {
-                LoanCompleteView(mainStack: $mainStack)
+                LoanCompleteView(mainStack: $mainStack, inputNumber: $inputNumber)
             })
         }
         .sheet(isPresented: $isShowModal, content: {
-            LoanModalArea(isLoanOk: $isLoanOk)
+            LoanModalArea(isLoanOk: $isLoanOk, inputNumber: $inputNumber)
                 .presentationDetents([.sheetSize])
         })
         .navigationTitle("대출받기")
