@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ListView: View {
     @EnvironmentObject var userVM: UserViewModel
+    @EnvironmentObject var bankbookVM: BankbookViewModel
     @Binding var mainStack: NavigationPath
     
     var body: some View {
@@ -26,7 +27,7 @@ struct ListView: View {
                             // destination
                             TransferView(mainStack: $mainStack)
                         } label: {
-                            userList(userProfileTitle: otherUser.userProfileTitle, userName: otherUser.userName, bankName: "", bankAccount: otherUser.userBankAccount)
+                            userList(userProfileTitle: otherUser.userProfileTitle, userName: otherUser.userName, bankName: otherUser.bankName, bankAccount: "")
                         }
                     } // ForEach
                 } // VStack

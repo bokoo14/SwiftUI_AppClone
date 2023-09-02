@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct BalanceArea: View {
-    @EnvironmentObject var userVM: UserViewModel
+    @EnvironmentObject var bankbookVM: BankbookViewModel
+    
     @State var remainMoney: Int = 0
     var body: some View {
-        Text("잔액: \(userVM.currentUser.totalMoney)원")
+        Text("잔액: \(bankbookVM.bankbook.totalMoney)원")
             .foregroundColor(Color(hex: 0x444444))
             .font(.pretendard(.light, size: 14))
             .padding(.vertical, 14)
@@ -25,6 +26,6 @@ struct BalanceArea: View {
 struct BalanceArea_Previews: PreviewProvider {
     static var previews: some View {
         BalanceArea()
-            .environmentObject(UserViewModel())
+            .environmentObject(BankbookViewModel())
     }
 }

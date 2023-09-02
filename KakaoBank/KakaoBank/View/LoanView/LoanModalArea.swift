@@ -9,16 +9,21 @@ import SwiftUI
 
 struct LoanModalArea: View {
     @Environment(\.presentationMode) var presentaionMode
-    
     @EnvironmentObject var userVM: UserViewModel
-    @EnvironmentObject var accountVM: AccountViewModel
+    @EnvironmentObject var bankbookVM: BankbookViewModel
+    @EnvironmentObject var transactionVM: TransactionViewModel
     
     @State var loanTarget: String = "김예현"
     
     @Binding var isLoanOk: Bool // 대출 완료 뷰로 넘어가기 위한 변수
     @Binding var inputNumber: String
     
+    
+    
     var body: some View {
+        var currentUserBankAccount: String = bankbookVM.bankbook.userBankAccount // 현재 유저의 계좌번호
+        var lastTotalMoney: Int = bankbookVM.bankbook.totalMoney // 현재 유저의 거래 전 가장 최근의 통장 잔액
+        
         VStack (spacing: 0){
             Image("ImgProfile10")
                 .resizable()
@@ -60,8 +65,8 @@ struct LoanModalArea: View {
                     // action
                     presentaionMode.wrappedValue.dismiss() // 현재의 뷰를 dismiss
                     isLoanOk = true // isLoanOK가 true라면 LoanCompleteView로 이동
-                    userVM.LoanUpdateData(loanedMoney: Int(inputNumber) ?? 0) // VM의 user.totalMoney값 변경
-                    accountVM.borrowMoney(targetName: "", currentMoney: 0)
+                    bankbookVM.LoanUpdateData(loanedMoney: Int(inputNumber) ?? 0)
+                    transactionVM.UpdateData(userBankAccount: currentUserBankAccount, senderAccountNumber: "1004", senderName: "김예현", transactionType: "#대출", totalMoney: lastTotalMoney + (Int(inputNumber) ?? 0), transactionMoney: Int(inputNumber) ?? 0)
                 } label: {
                     Text("대출받기")
                         .foregroundColor(Color.kakaoBlack300)
@@ -84,7 +89,8 @@ struct LoaㄴnModalArea_Previews: PreviewProvider {
         NavigationView {
             LoanModalArea(isLoanOk: .constant(true), inputNumber: .constant("1000000"))
                 .environmentObject(UserViewModel())
-                .environmentObject(AccountViewModel())
+                .environmentObject(BankbookViewModel())
+                .environmentObject(TransactionViewModel())
         }
     }
 }

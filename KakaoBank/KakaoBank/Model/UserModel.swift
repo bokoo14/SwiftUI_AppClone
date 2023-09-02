@@ -7,13 +7,16 @@
 
 import SwiftUI
 
+// User -> Bankbook -> Transaction
+
 // MARK: 사용자(현재 앱을 실행 중인 유저)
-struct User: Identifiable {
+struct UserModel: Identifiable {
     var id: UUID = UUID() // 사용자의 고유한 아이디 -> 후보키, 대체키
-    var userBankAccount: String // 사용자의 계좌번호 -> 후보키, 기본키
+    var userID: String // 사용자의 고유한 아이디 -> 후보키, 기본키(Primary key)⭐️
     var userName: String // 사용자의 이름
-    var userProfileTitle: String // 사용자의 프로필 이미지 이름
-    var totalMoney: Int // 현재 사용자의 총 잔고
+    var userProfileTitle: String // 사용자의 프로필 이미지
+    var bankName: String // 사용자의 은행
+    // 실제라면 아이디, 비번, 주민등록 번호, 주소가 추가적으로 저장되어 있을듯
 }
 
 // MARK: 후보키
@@ -59,3 +62,9 @@ struct User: Identifiable {
 
 // MARK: 데이터베이스 설계
 // https://velog.io/@inyong_pang/Database-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%84%A4%EA%B3%84-%EB%B0%8F-%EA%B5%AC%EC%A1%B0
+
+
+
+
+
+

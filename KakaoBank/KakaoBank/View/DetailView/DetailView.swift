@@ -38,7 +38,7 @@ struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             DetailView(mainStack: .constant(NavigationPath()))
-                .environmentObject(AccountViewModel())
+                .environmentObject(BankbookViewModel())
                 .environmentObject(UserViewModel())
                 .tint(.black)
         }

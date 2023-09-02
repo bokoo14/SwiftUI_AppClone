@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PassbookArea: View {
     @EnvironmentObject var userVM: UserViewModel
+    @EnvironmentObject var bankbookVM: BankbookViewModel
     @State private var isDetailViewActive = false // DetailView로 이동 여부를 추적하는 상태 변수
     @Binding var mainStack: NavigationPath
     
@@ -25,7 +26,7 @@ struct PassbookArea: View {
                         VStack (alignment: .leading, spacing: 6){
                             Text("\(userVM.currentUser.userName)의 통장★")
                                 .font(.pretendard(.light, size: 14))
-                            Text("\(userVM.currentUser.totalMoney)원")
+                            Text("\(bankbookVM.bankbook.totalMoney)원")
                                 .font(.pretendard(.bold, size: 19))
                         }
                         Spacer()
@@ -95,7 +96,7 @@ struct PassbookArea_Previews: PreviewProvider {
     static var previews: some View {
         PassbookArea(mainStack: .constant(NavigationPath()))
             .environmentObject(UserViewModel())
-            .environmentObject(AccountViewModel())
+            .environmentObject(BankbookViewModel())
         
         PassbookArea2()
     }

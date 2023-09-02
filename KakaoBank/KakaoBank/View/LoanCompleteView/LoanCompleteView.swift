@@ -52,7 +52,7 @@ struct LoanCompleteView: View {
 struct LoanCompleteView_Previews: PreviewProvider {
     static var previews: some View {
         LoanCompleteView(mainStack: .constant(NavigationPath()), inputNumber: .constant("10000000"))
-            .environmentObject(AccountViewModel())
+            .environmentObject(BankbookViewModel())
             .environmentObject(UserViewModel())
     }
 }

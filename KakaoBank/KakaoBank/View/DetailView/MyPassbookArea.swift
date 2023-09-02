@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct MyPassbookArea: View {
-    @EnvironmentObject var userVM: UserViewModel
+    @EnvironmentObject var bankbookVM: BankbookViewModel
     @Binding var mainStack: NavigationPath
     
     var body: some View {
         VStack (spacing: 48){
             VStack (spacing: 10){
-                Text(userVM.currentUser.userBankAccount)
+                Text(bankbookVM.bankbook.userBankAccount)
                     .font(.pretendard(.light, size: 15))
                     .foregroundColor(Color(hex: 0x202020).opacity(0.5))
 //                    .underline(pattern: .solid, color: Color(hex: 000000).opacity(0.2)) // 0.5 pixel만큼의 밑줄을 만드는 것은 불가능
@@ -25,7 +25,7 @@ struct MyPassbookArea: View {
                                 .padding(.top, 15)
                         )
                 HStack (spacing: 1){
-                    Text("\(userVM.currentUser.totalMoney)")
+                    Text("\(bankbookVM.bankbook.totalMoney)")
                         .font(.pretendard(.semibold, size: 35))
                     Text("원")
                         .font(.pretendard(.bold, size: 26))
@@ -72,8 +72,7 @@ struct MyPassbookArea_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             MyPassbookArea(mainStack: .constant(NavigationPath()))
-                .environmentObject(AccountViewModel())
-                .environmentObject(UserViewModel())
+                .environmentObject(BankbookViewModel())
         }
     }
 }
