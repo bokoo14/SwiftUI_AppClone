@@ -11,6 +11,7 @@ struct LoanModalArea: View {
     @Environment(\.presentationMode) var presentaionMode
     
     @EnvironmentObject var userVM: UserViewModel
+    @EnvironmentObject var accountVM: AccountViewModel
     
     @State var loanTarget: String = "김예현"
     
@@ -34,10 +35,10 @@ struct LoanModalArea: View {
                 .font(.pretendard(.light, size: 20))
                 .padding(.top, 4)
             
-            Text("받는 계좌: \(userVM.user.bankAccount)")
-                .foregroundColor(Color.kakaoGray300)
-                .font(.pretendard(.light, size: 13))
-                .padding(.top, 14)
+//            Text("받는 계좌: \(userVM.user.bankAccount)")
+//                .foregroundColor(Color.kakaoGray300)
+//                .font(.pretendard(.light, size: 13))
+//                .padding(.top, 14)
             
             // MARK: 취소, 대출받기 Button
             HStack (spacing: 9){
@@ -54,11 +55,13 @@ struct LoanModalArea: View {
                 
                 // MARK: 대출받기 버튼을 눌렀을때
                 // MARK: inputNumber를 UserViewModel의 user의 totalMoney를 +해줘야 함!
+                // MARK: AccountViewModel에 borrowMoney함수 실행(account에 )
                 Button {
                     // action
-                    presentaionMode.wrappedValue.dismiss()
-                    isLoanOk = true
-                    
+                    presentaionMode.wrappedValue.dismiss() // 현재의 뷰를 dismiss
+                    isLoanOk = true // isLoanOK가 true라면 LoanCompleteView로 이동
+                    userVM.LoanUpdateData(loanedMoney: Int(inputNumber) ?? 0) // VM의 user.totalMoney값 변경
+                    accountVM.borrowMoney(targetName: "", currentMoney: 0)
                 } label: {
                     Text("대출받기")
                         .foregroundColor(Color.kakaoBlack300)
@@ -81,6 +84,7 @@ struct LoaㄴnModalArea_Previews: PreviewProvider {
         NavigationView {
             LoanModalArea(isLoanOk: .constant(true), inputNumber: .constant("1000000"))
                 .environmentObject(UserViewModel())
+                .environmentObject(AccountViewModel())
         }
     }
 }

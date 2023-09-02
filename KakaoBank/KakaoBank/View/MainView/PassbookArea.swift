@@ -17,15 +17,15 @@ struct PassbookArea: View {
             NavigationLink(value: 0) {
                 VStack (spacing: 6){
                     HStack (spacing: 8){
-                        Image(userVM.user.userProfileTitle)
+                        Image(userVM.currentUser.userProfileTitle)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 34)
                             .cornerRadius(100)
                         VStack (alignment: .leading, spacing: 6){
-                            Text("\(userVM.user.userName)의 통장★")
+                            Text("\(userVM.currentUser.userName)의 통장★")
                                 .font(.pretendard(.light, size: 14))
-                            Text("\(userVM.user.totalMoney)원")
+                            Text("\(userVM.currentUser.totalMoney)원")
                                 .font(.pretendard(.bold, size: 19))
                         }
                         Spacer()

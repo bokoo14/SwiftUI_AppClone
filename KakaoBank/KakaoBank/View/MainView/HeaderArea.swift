@@ -12,7 +12,7 @@ struct HeaderArea: View {
     
     var body: some View {
         HStack (spacing: 6){
-            Text(userVM.user.userName)
+            Text(userVM.currentUser.userName)
                 .font(.pretendard(.semibold, size: 23))
             
             Text("내 계좌")
@@ -23,7 +23,7 @@ struct HeaderArea: View {
                 .cornerRadius(14)
             
             Spacer()
-            Image(userVM.user.userProfileTitle)
+            Image(userVM.currentUser.userProfileTitle)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 40)

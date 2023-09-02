@@ -11,7 +11,7 @@ struct BalanceArea: View {
     @EnvironmentObject var userVM: UserViewModel
     @State var remainMoney: Int = 0
     var body: some View {
-        Text("잔액: \(userVM.user.totalMoney)원")
+        Text("잔액: \(userVM.currentUser.totalMoney)원")
             .foregroundColor(Color(hex: 0x444444))
             .font(.pretendard(.light, size: 14))
             .padding(.vertical, 14)

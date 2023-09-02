@@ -13,13 +13,10 @@ struct TransactionDetailArea: View {
     var body: some View {
         ScrollView {
             ForEach(AccountVM.account) { vm in
-                TransactionListDetail(date: vm.date, userName: vm.targetName, moneyTag: vm.describe, currentMoney: vm.currentMoney, totalMoney: 600000000)
+                TransactionListDetail(date: vm.date, userName: vm.senderName, moneyTag: vm.transactionType, currentMoney: vm.currentMoney, totalMoney: vm.totalMoney)
             }
-            
             TransactionListDetail(date: "07.29", userName: "일론머스크", moneyTag: "#대출", currentMoney: 500000000, totalMoney: 600000000)
-            TransactionListDetail(date: "07.29", userName: "일론머스크", moneyTag: "#이체", currentMoney: 5000000, totalMoney: 60000000)
             Spacer()
-            
         }
     }
 }

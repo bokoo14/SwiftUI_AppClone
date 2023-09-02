@@ -21,12 +21,12 @@ struct ListView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(20)
                     
-                    ForEach(userVM.otherUser) { otherUser in
+                    ForEach(userVM.otherUsers) { otherUser in
                         NavigationLink {
                             // destination
                             TransferView(mainStack: $mainStack)
                         } label: {
-                            userList(userProfileTitle: otherUser.userProfileTitle, userName: otherUser.userName, bankName: otherUser.bankName, bankAccount: otherUser.bankAccount)
+                            userList(userProfileTitle: otherUser.userProfileTitle, userName: otherUser.userName, bankName: "", bankAccount: otherUser.userBankAccount)
                         }
                     } // ForEach
                 } // VStack
