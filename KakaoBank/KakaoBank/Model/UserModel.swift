@@ -11,7 +11,7 @@ import SwiftUI
 
 // MARK: 사용자(현재 앱을 실행 중인 유저)
 struct UserModel: Identifiable {
-    var id: UUID = UUID() // 사용자의 고유한 아이디 -> 후보키, 대체키
+    let id: UUID = UUID() // 사용자의 고유한 아이디 -> 후보키, 대체키
     var userID: String // 사용자의 고유한 아이디 -> 후보키, 기본키(Primary key)⭐️
     var userName: String // 사용자의 이름
     var userProfileTitle: String // 사용자의 프로필 이미지

@@ -19,7 +19,6 @@ struct LoanModalArea: View {
     @Binding var inputNumber: String
     
     
-    
     var body: some View {
         var currentUserBankAccount: String = bankbookVM.bankbook.userBankAccount // 현재 유저의 계좌번호
         var lastTotalMoney: Int = bankbookVM.bankbook.totalMoney // 현재 유저의 거래 전 가장 최근의 통장 잔액

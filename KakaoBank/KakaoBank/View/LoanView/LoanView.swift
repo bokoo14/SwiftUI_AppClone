@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct LoanView: View {
     @EnvironmentObject var userVm: UserViewModel
     @State var isShowModal: Bool = false
@@ -45,6 +46,7 @@ struct LoanView: View {
             }
             
             // MARK: 대출이 가능하다면
+            // MARK: 변수명 바꿔라 isLoanOk -> isLoanAble
             NavigationLink("", isActive: $isLoanOk, destination: {
                 LoanCompleteView(mainStack: $mainStack, inputNumber: $inputNumber)
             })
@@ -87,5 +89,6 @@ struct LoanView_Previews: PreviewProvider {
     static var previews: some View {
         LoanView(mainStack: .constant(NavigationPath()))
             .environmentObject(UserViewModel())
+            .environmentObject(BankbookViewModel())
     }
 }

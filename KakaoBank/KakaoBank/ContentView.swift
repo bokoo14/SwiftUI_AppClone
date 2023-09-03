@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-//    @EnvironmentObject var userVM: UserViewModel
     @State var selectedTab: Int = 0
+    
     var body: some View {
         TabView(selection: $selectedTab) {
             MainView()

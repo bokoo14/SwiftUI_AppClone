@@ -30,9 +30,10 @@ struct InputArea: View {
             .frame(maxWidth: .infinity)
             Spacer()
         } // VStack
-        .border(.red)
+        //        .border(.red)
     }
 }
+
 
 struct InputArea_Previews: PreviewProvider {
     static var previews: some View {

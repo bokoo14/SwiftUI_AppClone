@@ -10,14 +10,14 @@ import SwiftUI
 // MARK: 모든 extension들의 모음
 
 // MARK: LoanView
-extension LoanView {
-    // 금액 String을 Int로 변환
-    func StringToInt(StringMoney: String) -> Int {
-        var IntMoney: Int
-        IntMoney = Int(StringMoney) ?? 0
-        return IntMoney
-    }
+
+// 금액 String을 Int로 변환
+func StringToInt(StringMoney: String) -> Int {
+    var IntMoney: Int
+    IntMoney = Int(StringMoney) ?? 0
+    return IntMoney
 }
+
 
 // MARK: numberKeyArea
 extension numberKeyArea {
@@ -61,6 +61,6 @@ extension numberKeyArea {
         else if (inputNumber.wrappedValue.count == 9 && btnNumberText == "←") {
             inputNumber.wrappedValue.removeLast()
         }
-
+        
     } // func btnPressed
 } // extension numberKeyArea

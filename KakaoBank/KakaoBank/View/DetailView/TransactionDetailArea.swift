@@ -15,7 +15,7 @@ struct TransactionDetailArea: View {
             ForEach(transactionVM.transactions.reversed()) { vm in
                 TransactionListDetail(date: vm.date, userName: vm.senderName, moneyTag: vm.transactionType, currentMoney: vm.transactionMoney, totalMoney: vm.totalMoney)
             }
-//            TransactionListDetail(date: "07.29", userName: "일론머스크", moneyTag: "#대출", currentMoney: 500000000, totalMoney: 600000000)
+            //TransactionListDetail(date: "07.29", userName: "일론머스크", moneyTag: "#대출", currentMoney: 500000000, totalMoney: 600000000)
             Spacer()
         }
     }

@@ -16,16 +16,18 @@ struct BannerArea: View {
                 Text("랜덤 캐시가 쏙! 신용관리 루틴 챌린지")
                     .font(.pretendard(.semibold, size: 14))
             }
-            Spacer()
-            Image("ImgCharacter")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                //.scaledToFit()
-                //.padding(.vertical, 8)
-                .frame(width: 38)
-                //.scaleEffect(0.6)
+            .padding(.vertical, 12)
+                .padding(.leading, 24)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .overlay (alignment: .trailing) {
+                Image("ImgCharacter")
+                    .resizable()
+                    .scaledToFit()
+                    .padding(.vertical, 8)
+                    .padding(.trailing, 20)
+            }
         }
-        .padding(EdgeInsets(top: 8, leading: 24, bottom: 8, trailing: 20))
+        .frame(maxWidth: .infinity)
         .background(
             Color.kakaoWhite200.cornerRadius(20)
         )

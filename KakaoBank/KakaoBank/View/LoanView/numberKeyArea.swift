@@ -32,7 +32,7 @@ struct numberKeyArea: View {
                           inputNumber: $inputNumber, btnPressed: btnPressed)
             } // ForEach
         } // LazyVGrid
-        .border(.red)
+        //.border(.red)
         .padding(.horizontal, 29.5)
     }
 }

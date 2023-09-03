@@ -13,8 +13,9 @@ struct MainView: View {
     var body: some View {
         NavigationStack(path: $mainStack) {
             // ZStack으로 하고, height값을 받아와서 그것으로 padding값 지정해줘야 함!
+            
             VStack (spacing: 0){
-                HeaderArea()
+                HeaderArea() // 그림자 없애라
                     //.padding(.bottom, 10)
                 
                 ScrollView{
@@ -36,6 +37,7 @@ struct MainView_Previews: PreviewProvider {
         MainView()
             .environmentObject(UserViewModel())
             .environmentObject(BankbookViewModel())
+            .environmentObject(TransactionViewModel())
             .tint(.black)
     }
 }

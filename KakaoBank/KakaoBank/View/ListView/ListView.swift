@@ -10,6 +10,7 @@ import SwiftUI
 struct ListView: View {
     @EnvironmentObject var userVM: UserViewModel
     @EnvironmentObject var bankbookVM: BankbookViewModel
+    
     @Binding var mainStack: NavigationPath
     
     var body: some View {
@@ -25,9 +26,10 @@ struct ListView: View {
                     ForEach(userVM.otherUsers) { otherUser in
                         NavigationLink {
                             // destination
-                            TransferView(mainStack: $mainStack)
+                            TransferView(mainStack: $mainStack, userProfileTitle: otherUser.userProfileTitle, userName: otherUser.userName, bankAccount: bankbookVM.othersBankbook.first(where: { $0.userID == otherUser.userID })?.userBankAccount ?? "")
                         } label: {
-                            userList(userProfileTitle: otherUser.userProfileTitle, userName: otherUser.userName, bankName: otherUser.bankName, bankAccount: "")
+                            // MARK: 계좌번호 왜 안뜨냐 -> Model에 값을 생성해주지 않아서 생기는 오류 -> init에 넣어줌
+                            userList(userProfileTitle: otherUser.userProfileTitle, userName: otherUser.userName, bankName: otherUser.bankName, bankAccount: bankbookVM.othersBankbook.first(where: { $0.userID == otherUser.userID })?.userBankAccount ?? "")
                         }
                     } // ForEach
                 } // VStack
@@ -77,6 +79,7 @@ struct ListView_Previews: PreviewProvider {
         NavigationView {
             ListView(mainStack: .constant(NavigationPath()))
                 .environmentObject(UserViewModel())
+                .environmentObject(BankbookViewModel())
         }
         
         userList(userProfileTitle: "ImgProfile01", userName: "김페페", bankName: "카카오", bankAccount: "3333-11-7254440")

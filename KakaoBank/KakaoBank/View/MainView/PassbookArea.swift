@@ -21,7 +21,7 @@ struct PassbookArea: View {
                         Image(userVM.currentUser.userProfileTitle)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 34)
+                            .frame(width: UIScreen.main.bounds.width * 0.1)
                             .cornerRadius(100)
                         VStack (alignment: .leading, spacing: 6){
                             Text("\(userVM.currentUser.userName)의 통장★")

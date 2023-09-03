@@ -26,11 +26,11 @@ func nextBtn(isButtonActive: Bool, actionFunc: @escaping ()->Void ) -> some View
     .disabled(!isButtonActive) // isCorrectNumber가 false일 때 버튼 비활성화
 }
 
-// MARK: frame을 infinity로 주고, spacing을 주자
+// MARK: frame을 infinity로 주고, spacing을 주자 -> OK
 @ViewBuilder
 func addValueBtn(inputNumber: Binding<String>) -> some View {
-    var inputNumberInt = Int(inputNumber.wrappedValue) ?? 0
-    HStack (spacing: 0){
+    let inputNumberInt = Int(inputNumber.wrappedValue) ?? 0
+    HStack (spacing: 48){
         Button {
             // action
             let result = inputNumberInt + 10000
@@ -39,16 +39,16 @@ func addValueBtn(inputNumber: Binding<String>) -> some View {
             }
         } label: {
             Text("+1만")
+                .frame(maxWidth: .infinity)
                 .foregroundColor(Color.kakaoGray300)
-                .font(.pretendard(.regular, size: 12))
+                .font(.pretendard(.semibold, size: 12))
                 .padding(.vertical, 8)
-                .padding(.horizontal, 27)
                 .overlay(
                     RoundedRectangle(cornerRadius: 8)
                         .stroke(Color.kakaoGray100, lineWidth: 0.5)
                 )
         }
-        Spacer()
+        
         Button {
             // action
             let result = inputNumberInt + 50000
@@ -57,16 +57,16 @@ func addValueBtn(inputNumber: Binding<String>) -> some View {
             }
         } label: {
             Text("+5만")
+                .frame(maxWidth: .infinity)
                 .foregroundColor(Color.kakaoGray300)
-                .font(.pretendard(.regular, size: 12))
+                .font(.pretendard(.semibold, size: 12))
                 .padding(.vertical, 8)
-                .padding(.horizontal, 26)
                 .overlay(
                     RoundedRectangle(cornerRadius: 8)
                         .stroke(Color.kakaoGray100, lineWidth: 0.5)
                 )
         }
-        Spacer()
+        
         Button {
             // action
             let result = inputNumberInt + 100000
@@ -75,10 +75,10 @@ func addValueBtn(inputNumber: Binding<String>) -> some View {
             }
         } label: {
             Text("+10만")
+                .frame(maxWidth: .infinity)
                 .foregroundColor(Color.kakaoGray300)
-                .font(.pretendard(.regular, size: 12))
+                .font(.pretendard(.semibold, size: 12))
                 .padding(.vertical, 8)
-                .padding(.horizontal, 24)
                 .overlay(
                     RoundedRectangle(cornerRadius: 8)
                         .stroke(Color.kakaoGray100, lineWidth: 0.5)
@@ -89,7 +89,10 @@ func addValueBtn(inputNumber: Binding<String>) -> some View {
 }
 
 
+
 // MARK: LoanView, TransferView -> numberKeyArea
+// MARK: 변수명 btnNumberAlignment -> alignment
+// MARK: btnPressed ->  isbtnPressed
 @ViewBuilder
 func numberBtn(btnNumberText: String, btnNumberAlignment: Alignment, inputNumber: Binding<String>, btnPressed: @escaping (String, Binding<String>)->Void) -> some View {
     
@@ -98,13 +101,13 @@ func numberBtn(btnNumberText: String, btnNumberAlignment: Alignment, inputNumber
     } label: {
         Text(btnNumberText)
             .foregroundColor(Color.kakaoGray300)
-            .font(.pretendard(.medium, size: 22))
+            .font(.pretendard(.bold, size: 22))
             .frame(width: 70)
-        .border(.blue)
+        //.border(.blue)
             .padding(.top, 27)
             .padding(.bottom, 7)
             .frame(maxWidth: .infinity, alignment: btnNumberAlignment)
-        .border(.red)
+        //.border(.red)
     }
 }
 
@@ -126,6 +129,90 @@ func completeBtn(actionFunc: @escaping ()->Void) -> some View {
 }
 
 
+// MARK: TransferView
+// 1만원, 5만원, 10만원, 전액
+@ViewBuilder
+func addValueBtn2(inputNumber: Binding<String>, totalMoney: Int) -> some View {
+    let inputNumberInt = Int(inputNumber.wrappedValue) ?? 0
+    HStack (spacing: 6.33){
+        Button {
+            // action
+            let result = inputNumberInt + 10000
+            if result <= 999999999{
+                inputNumber.wrappedValue = String(result)
+            }
+        } label: {
+            Text("+1만")
+                .frame(maxWidth: .infinity)
+                .foregroundColor(Color.kakaoGray300)
+                .font(.pretendard(.semibold, size: 12))
+                .padding(.vertical, 8)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.kakaoGray100, lineWidth: 0.5)
+                )
+        }
+        
+        Button {
+            // action
+            let result = inputNumberInt + 50000
+            if result <= 999999999{
+                inputNumber.wrappedValue = String(result)
+            }
+        } label: {
+            Text("+5만")
+                .frame(maxWidth: .infinity)
+                .foregroundColor(Color.kakaoGray300)
+                .font(.pretendard(.semibold, size: 12))
+                .padding(.vertical, 8)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.kakaoGray100, lineWidth: 0.5)
+                )
+        }
+        
+        Button {
+            // action
+            let result = inputNumberInt + 100000
+            if result <= 999999999{
+                inputNumber.wrappedValue = String(result)
+            }
+        } label: {
+            Text("+10만")
+                .frame(maxWidth: .infinity)
+                .foregroundColor(Color.kakaoGray300)
+                .font(.pretendard(.semibold, size: 12))
+                .padding(.vertical, 8)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.kakaoGray100, lineWidth: 0.5)
+                )
+        }
+        
+        Button {
+            // action
+            // 잔액이 0원이 아닐때만 버튼이 동작해야 함
+            if totalMoney != 0 {
+                let result = inputNumberInt + totalMoney
+                if result <= 999999999{
+                    inputNumber.wrappedValue = String(result)
+                }
+            }
+        } label: {
+            Text("전액")
+                .frame(maxWidth: .infinity)
+                .foregroundColor(Color.kakaoGray300)
+                .font(.pretendard(.semibold, size: 12))
+                .padding(.vertical, 8)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.kakaoGray100, lineWidth: 0.5)
+                )
+        }
+    } // HStack
+    .padding(.horizontal, 30)
+}
+
 
 struct ViewBuilder_Previews: PreviewProvider {
 
@@ -139,5 +226,7 @@ struct ViewBuilder_Previews: PreviewProvider {
         }
 
         completeBtn {}
+        
+        addValueBtn2(inputNumber: .constant("1"), totalMoney: 10000)
     }
 }
