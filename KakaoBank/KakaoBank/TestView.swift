@@ -10,28 +10,21 @@
 import SwiftUI
 
 struct TestView: View {
-    @State var isToogleOn = false
-    @State var textFieldValue = ""
-    
-    var body: some View {
-        HStack {
-            TextField("Placeholder", text: $textFieldValue)
-                .disabled(!isToogleOn)
-            
-            let onToggle = Binding(
-                get: { self.isToogleOn },
-                set: {
-                    if !$0 {
-                        UIApplication.shared.endEditing()     // << here !!
-                    }
-                    
-                    self.isToogleOn = $0
-                }
-            )
-            Toggle("Activate textField", isOn: onToggle)
+    @State private var text = ""
+        
+        var body: some View {
+            VStack {
+                Text("텍스트 입력:")
+                TextField("여기에 입력하세요", text: $text)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                    .lineLimit(3) // 최대 줄 수 (줄 바꿈 수)
+                    .truncationMode(.tail) // 문자열이 너무 길 때 자르는 방식 (여기서는 끝에서 자름)
+                
+                Spacer()
+            }
+            .padding()
         }
-    }
-    
 }
 
 extension UIApplication {

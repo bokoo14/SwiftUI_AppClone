@@ -11,6 +11,10 @@ struct TransferCompleteView: View {
     @State var money: Int = 500000000
     @Binding var mainStack: NavigationPath
     
+//    var userProfileTitle: String
+//    var userName: String
+//    var bankAccount: String
+    
     var body: some View {
         VStack (spacing: 0){
             VStack (spacing: 0){

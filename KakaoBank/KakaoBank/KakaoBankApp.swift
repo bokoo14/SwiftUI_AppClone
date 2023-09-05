@@ -29,6 +29,7 @@ struct KakaoBankApp: App {
  [NOTE]
  ✔️ ObservableObject: StateObject, ObservedObject, EnvironmentObject를 쓸 수 있음
  ✔️ StateObject: 상위뷰에서 값이 바뀌더라도, 현재 나의 뷰에 있는 변수값은 바뀌지 않음
+             프로퍼티 래퍼로 표시된 관찰된 객체는 포함하는 뷰 구조체가 다시 그려질 때 파괴되거나 다시 인스턴스화되지 않습니다.
  ✔️ ObservedObject: ObservableObject에 @Publish를 쓴 변수를 관찰하고, 값이 바뀌면 뷰를 새로 그려줌, 보통 초기화가 필요할때 씀
  ✔️ EnvironmentObject: .environmentObject를 사용하여 뷰에 ObservableObject에 있는 데이터를 넘겨줌
  */
