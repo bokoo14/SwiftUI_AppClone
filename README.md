@@ -1,5 +1,6 @@
 # SwiftUI_AppClone
-디자이너의 피그마를 보며 iOS앱 만들기
+디자이너의 피그마를 보며 iOS앱 만들기  
+<img src= https://github.com/bokoo14/SwiftUI_AppClone/assets/97583162/89ae8175-7a96-4e14-8f8b-ae1474cb6b0d width="700"/>
 
 ## [Act1] 출쓱(애플 디벨로퍼 아카데미 출석 관리 앱)
 |실제 어플|클론 어플 구현 모습|
