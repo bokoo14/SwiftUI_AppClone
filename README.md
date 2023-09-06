@@ -22,7 +22,7 @@
               <img src= https://github.com/MoHamSung/bulmang/assets/114594496/ee2aecc5-e20c-4d1c-9e99-be4fcef4202f width="294" height="640"/>
             </td>
             <td>  
-              <img src= "https://github.com/MoHamSung/bulmang/assets/114594496/8e447ace-0e0e-4102-bcef-11e1999c2939" width="294" height="640"/>
+              <img src= https://github.com/bokoo14/SwiftUI_AppClone/assets/97583162/7f3207a7-70ef-4f4f-b60c-20f3121023c2 width="294" height="640"/>
             </td>
         </tr>
     </tbody>
