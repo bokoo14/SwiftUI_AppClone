@@ -28,7 +28,7 @@ struct FooterView: View {
                     .padding(EdgeInsets(top: 11, leading: 25, bottom: 10, trailing: 25))
                     .background(.white)
                     .cornerRadius(10)
-                    .border(.red)
+                    //.border(.red)
                 } // Button
                 .padding(.bottom, 20)
                 
@@ -37,11 +37,11 @@ struct FooterView: View {
                     .foregroundColor(Color("ColorFontDarkGray"))
                     .padding(EdgeInsets(top: 60, leading: 10, bottom: 20, trailing: 10))
                     .frame(maxWidth: .infinity)
-                    .border(.red)
+                    //.border(.red)
             } // VStack
             .frame(maxWidth: .infinity)
             .background(.clear)
-            .border(.red)
+            //.border(.red)
      
     }
 }

@@ -13,20 +13,20 @@ struct LearnMoreView: View {
             Text("iPhone 14 Pro 더 깊이 살펴보기")
                 .font(.system(size: 24, weight: .medium))
                 .foregroundColor(Color("ColorFontBlack"))
-                .border(.red)
+                //.border(.red)
             Button {
                 // action
             } label: {
                 Text("apple.com에서 더 알아보기")
                     .font(.system(size: 12))
                     .foregroundColor(Color("ColorBtnBlue"))
-                    .border(.red)
+                    //.border(.red)
             }
         } // VStack
         .frame(maxWidth: .infinity)
         .padding(.vertical, 60)
         .background(.white)
-        .border(.red)
+        //.border(.red)
     }
     
     

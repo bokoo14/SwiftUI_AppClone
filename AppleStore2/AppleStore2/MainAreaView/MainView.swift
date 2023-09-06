@@ -13,12 +13,12 @@ struct MainView: View {
             Text("iPhone 14 Pro")
                 .foregroundColor(Color("ColorFontWhite"))
                 .font(.system(size: 20))
-                .border(.red)
+                //.border(.red)
                
             Text("프로 그 이상.")
                 .foregroundColor(Color("ColorFontWhite"))
                 .font(.system(size: 40, weight: .bold))
-                .border(.red)
+                //.border(.red)
         } // imageLayout
     }
 }
