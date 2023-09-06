@@ -62,13 +62,13 @@
     <tbody>
         <tr>
             <td>
-              <img src= https://github.com/bokoo14/SwiftUI_AppClone/assets/97583162/7130f937-2f84-4345-940f-a3add5cfd179 width="294" height="640"/>
+              <img src= https://github.com/bokoo14/SwiftUI_AppClone/assets/97583162/7130f937-2f84-4345-940f-a3add5cfd179 width="294"/>
             </td>
             <td>
-              <img src= https://github.com/bokoo14/SwiftUI_AppClone/assets/97583162/4c121a50-a457-4c4b-8e7d-b2b59fe9eda2 width="294" height="640"/>
+              <img src= https://github.com/bokoo14/SwiftUI_AppClone/assets/97583162/4c121a50-a457-4c4b-8e7d-b2b59fe9eda2 width="294"/>
             </td>
             <td>  
-              <img src= https://github.com/bokoo14/SwiftUI_AppClone/assets/97583162/04416372-f346-41f8-9103-d4237a893902 width="294" height="640"/>
+              <img src= https://github.com/bokoo14/SwiftUI_AppClone/assets/97583162/04416372-f346-41f8-9103-d4237a893902 width="294"/>
             </td>
         </tr>
     </tbody>
