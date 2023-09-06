@@ -27,11 +27,11 @@ struct CardView: View {
                 ForEach(recommendViewModel.recommendViewModel) { rv in
                     CardDetailView(title: rv.title, explain: rv.explain, imageName: rv.imageName, titleColor: rv.titleColor, explainColor: rv.explainColor)
                         .frame(width: geo.size.width - totalSpacing) //, height: 509)
-                        .border(.blue)
+                        //.border(.blue)
                 } // ForEach
             } // HStack
             .padding(.horizontal, 20)
-            .border(.red)
+            //.border(.red)
             .offset(x: (CGFloat(index) * (-width) + (index != 0 ? adjustmentWidth : 0) + offset))
             .gesture(
                 DragGesture()
