@@ -79,11 +79,6 @@ struct LoanView: View {
     }
 }
 
-// Sheet Size Custom
-// 339/852 -> 화면의 40프로만 차지
-extension PresentationDetent {
-    static let sheetSize = Self.height(UIScreen.main.bounds.height * 0.4)
-}
 
 struct LoanView_Previews: PreviewProvider {
     static var previews: some View {

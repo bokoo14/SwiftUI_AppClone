@@ -30,6 +30,7 @@ struct TransferModalArea: View {
             Image(userProfileTitle)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .frame(height: 50)
                 .frame(width: 50)
             HStack (spacing: 0){
                 Text(userName).font(.pretendard(.medium, size: 20))
@@ -40,14 +41,14 @@ struct TransferModalArea: View {
             
             Text("이체하시겠습니까?")
                 .font(.pretendard(.light, size: 20))
-                .padding(.top, 4)
+                .padding(.top, 14)
             
             Text("받는 계좌: \(bankAccount)")
                 .foregroundColor(Color.kakaoGray300)
                 .font(.pretendard(.light, size: 13))
-                .padding(.top, 14)
+                .padding(.top, 4)
             
-            // MARK: 취소, 대출받기 Button
+            // MARK: 취소, 이체하기 Button
             HStack (spacing: 9){
                 Button {
                     presentaionMode.wrappedValue.dismiss()
@@ -77,7 +78,7 @@ struct TransferModalArea: View {
                 }
             } // Button HStack
             .padding(.top, 43)
-            Spacer()
+            .padding(.bottom, 34)
         } // VStack
         .padding(.top, 50)
         .padding(.horizontal, 16)

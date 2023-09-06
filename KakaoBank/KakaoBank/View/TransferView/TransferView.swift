@@ -22,7 +22,6 @@ struct TransferView: View {
     @State var inputNumber: String = "" // 버튼을 눌렀을때 저장되는 값
     
     
-//    TransferView(mainStack: $mainStack, userProfileTitle: otherUser.userProfileTitle, userName: otherUser.userName, bankAccount: bankbookVM.othersBankbook.first(where: { $0.userID == otherUser.userID })?.userBankAccount ?? "")
     var body: some View {
         VStack (spacing: 12){
             InputArea2(inputNumber: $inputNumber)

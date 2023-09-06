@@ -20,13 +20,14 @@ struct LoanModalArea: View {
     
     
     var body: some View {
-        var currentUserBankAccount: String = bankbookVM.bankbook.userBankAccount // 현재 유저의 계좌번호
-        var lastTotalMoney: Int = bankbookVM.bankbook.totalMoney // 현재 유저의 거래 전 가장 최근의 통장 잔액
+        let currentUserBankAccount: String = bankbookVM.bankbook.userBankAccount // 현재 유저의 계좌번호
+        let lastTotalMoney: Int = bankbookVM.bankbook.totalMoney // 현재 유저의 거래 전 가장 최근의 통장 잔액
         
         VStack (spacing: 0){
             Image("ImgProfile10")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .frame(height: 50)
                 .frame(width: 50)
             HStack (spacing: 0){
                 Text(loanTarget).font(.pretendard(.medium, size: 20))
@@ -38,11 +39,6 @@ struct LoanModalArea: View {
             Text("대출 받으시겠습니까?")
                 .font(.pretendard(.light, size: 20))
                 .padding(.top, 4)
-            
-//            Text("받는 계좌: \(userVM.user.bankAccount)")
-//                .foregroundColor(Color.kakaoGray300)
-//                .font(.pretendard(.light, size: 13))
-//                .padding(.top, 14)
             
             // MARK: 취소, 대출받기 Button
             HStack (spacing: 9){
@@ -76,7 +72,7 @@ struct LoanModalArea: View {
                 }
             } // Button HStack
             .padding(.top, 43)
-            Spacer()
+            .padding(.bottom, 34)
         } // VStack
         .padding(.top, 50)
         .padding(.horizontal, 16)

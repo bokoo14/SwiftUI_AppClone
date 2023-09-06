@@ -19,7 +19,7 @@ struct ContentView: View {
                 .tag(0)
                 .environmentObject(UserViewModel())
             
-            TestView()
+            Text("두번째 탭이에용~")
                 .tabItem({
                     Image(selectedTab == 1 ? "ImgIcon02" : "ImgIcon02_2")
                         .resizable()
@@ -29,7 +29,7 @@ struct ContentView: View {
                 })
                 .tag(1)
             
-            TestView()
+            Text("세번째 탭이에용~")
                 .tabItem({
                     Image(selectedTab == 2 ? "ImgIcon03" : "ImgIcon03_2")
                         .resizable()
@@ -38,7 +38,7 @@ struct ContentView: View {
                 })
                 .tag(2)
             
-            TestView()
+            Text("네번째 탭이에용~")
                 .tabItem({
                     Image(selectedTab == 3 ? "ImgIcon04" : "ImgIcon04_2")
                         .resizable()

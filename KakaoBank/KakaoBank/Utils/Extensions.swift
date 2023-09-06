@@ -64,3 +64,12 @@ extension numberKeyArea {
         
     } // func btnPressed
 } // extension numberKeyArea
+
+
+// MARK: ModalView의 크기 조절
+// Sheet Size Custom
+// 339/852 -> 화면의 40프로만 차지
+extension PresentationDetent {
+    //static let sheetSize = Self.height(UIScreen.main.bounds.height * 0.4)
+    static let sheetSize = Self.height(339)
+}
