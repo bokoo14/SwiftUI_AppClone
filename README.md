@@ -22,7 +22,7 @@
               <img src= https://github.com/MoHamSung/bulmang/assets/114594496/ee2aecc5-e20c-4d1c-9e99-be4fcef4202f width="294" height="640"/>
             </td>
             <td>  
-              <img src= "https://github.com/MoHamSung/bulmang/assets/114594496/8e447ace-0e0e-4102-bcef-11e1999c2939" width="294" height="640"/>
+              <img src= https://github.com/bokoo14/SwiftUI_AppClone/assets/97583162/7f3207a7-70ef-4f4f-b60c-20f3121023c2 width="294" height="640"/>
             </td>
         </tr>
     </tbody>
@@ -62,13 +62,13 @@
     <tbody>
         <tr>
             <td>
-              <img src= https://github.com/bokoo14/SwiftUI_AppClone/assets/97583162/7130f937-2f84-4345-940f-a3add5cfd179 width="294" height="640"/>
+              <img src= https://github.com/bokoo14/SwiftUI_AppClone/assets/97583162/7130f937-2f84-4345-940f-a3add5cfd179 width="294"/>
             </td>
             <td>
-              <img src= https://github.com/bokoo14/SwiftUI_AppClone/assets/97583162/4c121a50-a457-4c4b-8e7d-b2b59fe9eda2 width="294" height="640"/>
+              <img src= https://github.com/bokoo14/SwiftUI_AppClone/assets/97583162/4c121a50-a457-4c4b-8e7d-b2b59fe9eda2 width="294"/>
             </td>
             <td>  
-              <img src= https://github.com/bokoo14/SwiftUI_AppClone/assets/97583162/04416372-f346-41f8-9103-d4237a893902 width="294" height="640"/>
+              <img src= https://github.com/bokoo14/SwiftUI_AppClone/assets/97583162/e15a7c78-1fbf-4674-83ed-d548b1839de1 width="294"/>
             </td>
         </tr>
     </tbody>
