@@ -8,7 +8,7 @@
 import SwiftUI
 
 class BankbookViewModel: ObservableObject {
-    @Published var bankbook: BankbookModel = BankbookModel(userID: "user4", userBankAccount: "44444444", totalMoney: 0)
+    @Published var bankbook: BankbookModel = BankbookModel(userID: "user4", userBankAccount: "1234-5678", totalMoney: 0)
     
     @Published var othersBankbook: [BankbookModel] = []
     

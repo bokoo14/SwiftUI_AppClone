@@ -14,44 +14,37 @@ struct LoanCompleteView: View {
     var body: some View {
         ZStack (alignment: .bottom){
             VStack (spacing: 0){
-                VStack (spacing: 0){
-                    Image(systemName: "checkmark.circle.fill") // 안의 색깔과 밖의 색 바꿀 수 있음~
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 29)
-                        .padding(.vertical, 12)
-                        .padding(.horizontal, 13)
-                        .background(Color.kakaoYellow.cornerRadius(50))
-                    VStack (spacing: 3){
-                        Text("김예현님이")
+                Image(systemName: "checkmark.circle.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 55)
+                    .symbolRenderingMode(.palette)
+                    .foregroundStyle(Color.kakaoBlack300, Color.kakaoYellow)
+                VStack (spacing: 3){
+                    Text("김예현님이")
+                        .foregroundColor(Color.kakaoBlack300)
+                        .font(.pretendard(.semibold, size: 24))
+                        .padding(.top, 35)
+                    HStack (spacing: 0){
+                        Text("\(Int(inputNumber) ?? 0)")
+                            .foregroundColor(Color.kakaoBlue300)
+                            .font(.pretendard(.semibold, size: 24))
+                        Text("원 보냈어요")
                             .foregroundColor(Color.kakaoBlack300)
                             .font(.pretendard(.semibold, size: 24))
-                            .padding(.top, 35)
-                        HStack (spacing: 0){
-                            Text("\(Int(inputNumber) ?? 0)")
-                                .foregroundColor(Color.kakaoBlue300)
-                                .font(.pretendard(.semibold, size: 24))
-                            Text("원 보냈어요")
-                                .foregroundColor(Color.kakaoBlack300)
-                                .font(.pretendard(.semibold, size: 24))
-                        }
-                    } // Text VStack
-                } // Image & Text VStack
-                //.padding(.top, 240)
-                
-                //Spacer()
-                
-                // 확인 버튼을 눌렀을때
-    //            completeBtn {
-    //                mainStack = .init()
-    //            }
-            }// 전체 VStack
+                    }
+                } // Text VStack
+            } // Image & Text VStack
+            .padding(.bottom, 84)
             .frame(maxHeight: .infinity)
-            .padding(.bottom, 60)
+
+            // MARK: 완료 버튼
             completeBtn {
                 mainStack = .init()
             }
-        } //
+            .padding(.bottom, 34)
+            .padding(.top, 43)
+        } // ZStack
         
     }
 }

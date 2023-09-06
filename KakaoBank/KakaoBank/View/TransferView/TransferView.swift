@@ -56,7 +56,8 @@ struct TransferView: View {
             nextBtn(isButtonActive: true, actionFunc: showModal)
             
             NavigationLink("", isActive: $isLoanOk, destination: {
-                TransferCompleteView(mainStack: $mainStack)
+                //TransferCompleteView(mainStack: $mainStack)
+                TransferCompleteView(mainStack: $mainStack, userName: userName, inputNumber: StringToInt(StringMoney: inputNumber))
             })
             
         }
