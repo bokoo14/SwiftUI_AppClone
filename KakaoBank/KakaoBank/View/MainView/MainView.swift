@@ -10,13 +10,13 @@ import SwiftUI
 struct MainView: View {
     @State var mainStack = NavigationPath()
     
+    // TODO: NavigationStack에 대해 공부하고, 잘 적용시키기
     var body: some View {
         NavigationStack(path: $mainStack) {
-            // ZStack으로 하고, height값을 받아와서 그것으로 padding값 지정해줘야 함!
-            
+            // FIXME: 상단의 HeaderArea부분 스크롤하지 않았을떄는 그림자가 없고, 스크롤시에만 그림자가 생겨야 한다
+            // FIXME: ZStack으로 하고, height값을 받아와서 그것으로 padding값 지정해줘야 함!
             VStack (spacing: 0){
-                HeaderArea() // 그림자 없애라
-                    //.padding(.bottom, 10)
+                HeaderArea()
                 
                 ScrollView{
                     VStack (spacing: 8){

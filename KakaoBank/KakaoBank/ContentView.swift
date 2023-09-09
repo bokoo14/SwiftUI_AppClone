@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var selectedTab: Int = 0
     
+    // FIXME: PassbookArea로 들어가면 하단의 TabView가 사라져야 함
     var body: some View {
         TabView(selection: $selectedTab) {
             MainView()
