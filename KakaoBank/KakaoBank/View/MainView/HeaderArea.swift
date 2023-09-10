@@ -31,10 +31,10 @@ struct HeaderArea: View {
         }
         .padding(.vertical, 10)
         .padding(.horizontal, 28)
-        .background( // FIXME: 스크롤할때만 그림자 생기게 바꿔라 (level4 참고)
-            Color.kakaoWhite300
-                .shadow(color: Color.kakaoBlack100.opacity(0.05), radius: 2, x: 0, y: 4)
-        )
+//        .background( // FIXME: 스크롤할때만 그림자 생기게 바꿔라 (level4 참고)
+//            Color.kakaoWhite300
+//                .shadow(color: Color.kakaoBlack100.opacity(0.05), radius: 2, x: 0, y: 4)
+//        )
     }
 }
 

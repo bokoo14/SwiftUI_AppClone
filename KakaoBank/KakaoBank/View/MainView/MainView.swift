@@ -7,8 +7,15 @@
 
 import SwiftUI
 
+/// 얼마만큼 Scroll했는지 저장
+struct ScrollOffsetPreferenceKey: PreferenceKey {
+    static var defaultValue: CGPoint = .zero
+    static func reduce(value: inout CGPoint, nextValue: ()-> CGPoint){}
+}
+
 struct MainView: View {
     @State var mainStack = NavigationPath()
+    @State var wholeViewHeight : CGFloat // 전체 뷰(헤더를 제외한 구역)의 높이
     
     // TODO: NavigationStack에 대해 공부하고, 잘 적용시키기
     var body: some View {
@@ -27,6 +34,15 @@ struct MainView: View {
                         BottomOptionArea()
                     }
                 } // ScrollView
+                .background(
+                    GeometryReader { geo -> Color in
+                        DispatchQueue.main.async {
+                            wholeViewHeight =  geo.size.height
+                        }
+                        return Color.clear
+                    }
+                ) // background: 전체 뷰(헤더를 제외한 구역)의 높이구하기
+                
             } // VStack
         } // NavigationStack
     }
@@ -34,7 +50,7 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(wholeViewHeight: 300)
             .environmentObject(UserViewModel())
             .environmentObject(BankbookViewModel())
             .environmentObject(TransactionViewModel())

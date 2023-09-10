@@ -13,7 +13,7 @@ struct ContentView: View {
     // FIXME: PassbookArea로 들어가면 하단의 TabView가 사라져야 함
     var body: some View {
         TabView(selection: $selectedTab) {
-            MainView()
+            MainView(wholeViewHeight: 100)
                 .tabItem({
                     Image(selectedTab == 0 ? "ImgIcon01" : "ImgIcon01_2")
                 })
