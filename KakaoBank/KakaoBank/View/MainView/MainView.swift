@@ -24,6 +24,10 @@ struct MainView: View {
             // FIXME: ZStack으로 하고, height값을 받아와서 그것으로 padding값 지정해줘야 함!
             VStack (spacing: 0){
                 HeaderArea()
+                    .background(
+                        Color.kakaoWhite300
+                            .shadow(color: Color.kakaoBlack100.opacity(0.05), radius: 2, x: 0, y: 4)
+                    )
                 
                 ScrollView{
                     VStack (spacing: 8){
